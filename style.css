@@ -76,6 +76,7 @@ img.contact {
     padding: 0.5rem;
 }
  
+/* UW Logo featured on page*/
 img#UWEE {
     margin-left: auto;
     margin-right: auto;
@@ -99,14 +100,34 @@ a:hover {
     display: none;
 }
 
+/* Alt header appears on smaller screen sizes */
 div.altHeader {
     display: block;
 }
 
+/* Email, Resume, GitHub Icon */
 div#icons {
     display: flex;
 }
 
+/* Project Header with Icons */
+div.projectHeader {
+    display: flex;
+}
+
+/* Project Icons */
+img.projectIcon {
+    width: 3rem;
+    max-height: 2rem;
+    padding-left: 1rem;
+}
+
+/* Icons used within paragraphs */
+img.iconInline {
+    width: 1.5rem;
+}
+
+/* Reformat website for smaller screen sizes */
 @media (min-width: 550px) {
     .left {
         width: 40%;
