@@ -71,8 +71,8 @@ p {
     padding: 0.5rem;
 }
 
-/* Email, Resume, GitHub Icon */
-img.contact {
+/* Email, Resume, GitHub and Hobbies Icons */
+img.largeIcon {
     width: 4rem;
     padding: 0.5rem;
 }
@@ -83,7 +83,7 @@ img#main {
     margin-right: auto;
     display: block;
     width: 50%;
-    padding-bottom: 4vh;
+    padding-bottom: 10vh;
     filter: invert(0%);
 }
 
@@ -97,7 +97,8 @@ a:hover {
     font-style: italic;
 }
 
-.contactLink {
+/* Text to remove when screen size is small */
+.removeOnSmall {
     display: none;
 }
 
@@ -106,14 +107,16 @@ div.altHeader {
     display: block;
 }
 
-/* Email, Resume, GitHub Icon */
-div#icons {
+/* Email, Resume, GitHub and Hobbies Icons */
+div.iconStack {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
 }
 
 /* Project Header with Icons */
 div.projectHeader {
-    display: flex;
+    display: block;
 }
 
 /* Project Icons */
@@ -123,6 +126,7 @@ img.projectIcon {
     padding-left: 1rem;
 }
 
+/* Icons used in "Coursework" section */
 img.classIcon {
     width: 2.5rem;
     padding-left: 0.2rem;
@@ -134,7 +138,7 @@ img.iconInline {
 }
 
 /* Reformat website for smaller screen sizes */
-@media (min-width: 550px) {
+@media only screen and (min-width: 550px) {
     .left {
         width: 40%;
     }
@@ -144,7 +148,7 @@ img.iconInline {
     }
     h1 {
         font-size: 3.5rem;
-        padding-top: 28vh;
+        padding-top: 30vh;
         color: white;
     }
     div.altHeader {
@@ -152,16 +156,22 @@ img.iconInline {
     }
     img#main {
         width: 85%;
-        padding-bottom: 0vh;
         filter: invert(100%);
     }
 }
 
-@media (min-width: 650px) {
-    .contactLink {
+@media only screen and (min-width: 650px) {
+    .removeOnSmall {
         display: inline;
     }
-    div#icons {
+    div.iconStack {
         display: block;
+    }
+}
+
+/* Shift Project Icons underneath Project Headers */
+@media only screen and (min-width: 950px) {
+    div.projectHeader {
+        display: flex;
     }
 }
