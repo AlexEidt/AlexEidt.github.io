@@ -24,6 +24,13 @@ body {
     display: flex;
     height: 100%;
     width: 0%;
+    /* Alternate Background Colors */
+    /*background-color: #ff4040;*/
+    /*background-color: #0004ff;*/
+    /*background-color: black;*/
+    /*background-color: #c9cf86;*/
+    /*background-color: #766d7a;*/
+    /*background-color: #f59642;*/
     background-color: #5896ec;
     overflow-y: scroll;
     display: block;
