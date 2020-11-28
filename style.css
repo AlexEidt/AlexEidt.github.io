@@ -78,7 +78,7 @@ p {
     padding: 0.5rem;
 }
 
-/* Email, Resume, GitHub and Hobbies Icons */
+/* Email, Resume, GitHub, LinkedIn and Hobbies Icons */
 img.largeIcon {
     width: 4rem;
     padding: 0.5rem;
@@ -114,11 +114,10 @@ div.altHeader {
     display: block;
 }
 
-/* Email, Resume, GitHub and Hobbies Icons */
+/* Email, Resume, GitHub, LinkedIn and Hobbies Icons */
 div.iconStack {
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
+    flex-wrap: wrap
 }
 
 /* Project Header with Icons */
