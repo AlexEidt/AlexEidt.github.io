@@ -61,7 +61,7 @@
             </div>
         </div>
         <br />
-        <h2>Coursework</h2>
+        <h2><a href="#" onclick="toggleLeft(this);">Coursework</a></h2>
         <p>
             <div id="courses">
                 <ul>
@@ -109,25 +109,13 @@
                         <a href="https://alexeidt.pythonanywhere.com/EE418/" target="_blank">EE 418: Network Security and Cryptography</a>
                         <img class="classIcon" src="Icons/cryptography.png" title="Network Security and Cryptography" alt="Cryptography Icon" />
                     </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/MATH307/" target="_blank">MATH 307: Differential Equations</a>
-                        <img class="classIcon" src="Icons/diffequations.png" title="Differential Equations" alt="Differential Equations Icon" />
-                    </li>
-                    <li>
-                        <a href="http://sub.mersion.cc/m308/m308_2019D.html" target="_blank">MATH 308: Matrix Algebra</a>
-                        <img class="classIcon" src="Icons/matrixalg.png" title="Matrix Algebra" alt="Matrix Algebra Icon" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/MATH324/" target="_blank">MATH 324: Multivariable Calculus</a>
-                        <img class="classIcon" src="Icons/multivariablecalc.png" title="Multivariable Calculus" alt="Multivariable Calculus Icon" />
-                    </li>
                 </ul>                
             </div>
         </p>
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
-            <h3>Game of Life Simulator</h3>
+            <h3><a href="#" onclick="toggleLeft(this);">Game of Life Simulator</a></h3>
             <div>
                 <a href="https://github.com/AlexEidt/Game-of-Life-Simulator" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -153,7 +141,7 @@
             string of words with no spaces.
         </p>
         <div class="projectHeader">
-            <h3>Directory Grapher</h3>
+            <h3><a href="#" onclick="toggleLeft(this);">Directory Grapher</a></h3>
             <div>
                 <a href="https://github.com/AlexEidt/Directory-Grapher" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -184,7 +172,7 @@
             for editing the UW Solar site.
         </p>
         <div class="projectHeader">
-            <h3>Word Search Generator</h3>
+            <h3><a href="#" onclick="toggleLeft(this);">Word Search Generator</a></h3>
             <div>
                 <a href="https://github.com/AlexEidt/WordSearch" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -197,7 +185,7 @@
             reshuffle the current words, or create a new board with new words.
         </p>
         <div class="projectHeader">
-            <h3>Frogger</h3>
+            <h3><a href="#" onclick="toggleLeft(this);">Frogger</a></h3>
             <div>
                 <!--
                 <a href="https://github.com/AlexEidt/Frogger" target="_blank">
@@ -212,7 +200,7 @@
             final project.
         </p>
         <div class="projectHeader">
-            <h3>UW Course Planner</h3>
+            <h3><a href="#" onclick="toggleLeft(this);">UW Course Planner</a></h3>
             <div>
                 <a href="https://github.com/AlexEidt/UW-Course-Planner" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -233,7 +221,7 @@
             to parse course data from the UW course catalog and time schedule.
         </p>
         <div class="projectHeader">
-            <h3>Basketball Statistics Tracking</h3>
+            <h3><a href="#" onclick="toggleLeft(this);">Basketball Statistics Tracking</a></h3>
             <div>
                 <a href="https://github.com/AlexEidt/Basketball-Statistics-Tracking" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -275,3 +263,200 @@
     </div>
 </body>
 </html>
+
+<div id="storage" class="hidden"></div>
+<div id="Coursework" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            Coursework @ 
+            <span>
+                <a href="https://www.washington.edu/" target="_blank">
+                    <img id="uwIcon" class="invert" src="Icons/uw.png" alt="UW Icon" />
+                </a>
+            </span>
+        </h2>
+        <br />
+        <h2 class="left-h2-line">Year 1</h2>
+        <h3 class="left-h3">Autumn 2018</h3>
+        <b>MATH 125</b>: Calculus with Analytic Geometry II<br />
+        <b>CHEM 142</b>: General Chemistry<br />
+        <b>ART H 201</b>: Survey of Western Ancient Art<br />
+        <b>ENGR 101</b>: Engineering Exploration<br />
+        <b>GEN ST 199</b>: The University Community<br />
+        <h3 class="left-h3">Winter 2019</h3>
+        <b>MATH 126</b>: Calculus with Analytic Geometry III<br />
+        <b>CSE 142</b>: Computer Programming I<br />
+        <b>ENGL 131</b>: Composition: Exposition<br />
+        <b>EE 491</b>: Undergraduate Seminar<br />
+        <b>ENGR 297</b>: Urban Infrastructure Lab (UW Solar)<br />
+        <h3 class="left-h3">Spring 2019</h3>
+        <strike><b>MATH 308</b>: Matrix Algebra</strike><br />
+        <b>PHYS 122</b>: Electromagnestism<br />
+        <b>CSE 143</b>: Computer Programming II<br />
+        <b>ENGR 497</b>: Urban Infrastructure Lab (UW Solar)<br />
+        <br />
+        <h2 class="left-h2-line">Year 2</h2>
+        <h3 class="left-h3">Autumn 2019</h3>
+        <b>MATH 308</b>: Matrix Algebra<br />
+        <b>PHYS 123</b>: Waves<br />
+        <b>ENGR 231</b>: Introduction to Technical Communication<br />
+        <b>CLAS 320</b>: Society and Status in Greece and Rome<br />
+        <h3 class="left-h3">Winter 2020</h3>
+        <b>MATH 307</b>: Differential Equations<br />
+        <b>EE 215</b>: Fundamentals of Electrical Engineering<br />
+        <b>EE 271</b>: Digital Circuits and Systems<br />
+        <b>EE 398</b>: Professional Issues<br />
+        <b>CSE 163</b>: Intermediate Data Programming<br />
+        <h3 class="left-h3">Spring 2020</h3>
+        <b>IND E 315</b>: Probability and Statistics for Engineers<br />
+        <b>EE 233</b>: Circuit Theory<br />
+        <b>EE 235</b>: Continuous Time Linear Systems<br />
+        <b>CSE 351</b>: The Hardware/Software Interface<br />
+        <b>CSE 391</b>: System and Software Tools<br />
+        <br />
+        <h2 class="left-h2-line">Year 3</h2>
+        <h3 class="left-h3">Autumn 2020</h3>
+        <b>MATH 324</b>: Multivariable Calculus<br />
+        <b>EE 418</b>: Network Security and Cryptography<br />
+        <b>CSE 373</b>: Data Structures and Algorithms<br />
+        <b>CSE 374</b>: Intermediate Programming Concepts and Tools<br />
+        <br />
+        <br />
+    </div>
+</div>
+<div id="Game of Life Simulator" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            Game of Life Simulator
+        </h2>
+        <br />
+        This is a simulator I built for Conway's Game of Life. The Game of Life is a simple one-player
+        game (or simulation) where a set of four simple rules dictates which cells on a board survive
+        into the next generation. The user gives a certain starting condition and watches how cells
+        on a board grow and change.
+        <br /><br />
+        <img class="img-left" src="Projects/GameofLife/app.gif" alt="Game of Life App" />
+        <br />
+        The app is built in <b>Kotlin</b> 
+        <img class="iconInline invert" src="Icons/kotlin.png" alt="Kotlin Icon" /> and the UI is made with
+        <b>Kotlin Swing</b>. I used <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Kotlin Icon" />
+        for the PNG screenshot and GIF creation. Below are some examples of what the PNG screenshot and GIF
+        recording look like.
+        <br /><br />
+        <div class="row">
+            <div class="col">
+                <img style="width: 100%" class="invert" src="Projects/GameofLife/recording.gif" alt="Game of Life GIF" />
+            </div>
+            <div class="col">
+                <img style="width: 100%" class="invert" src="Projects/GameofLife/snapshot.png" alt="Game of Life Snapshot" />
+            </div>
+        </div>
+        <br /><br />
+    </div>
+</div>
+<div id="Directory Grapher" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            Directory Grapher
+        </h2>
+        <br />
+        The Directory Grapher is a simple tool for visualizing the entire structure of any directory.
+        There are different options and orientations the user can specify to customize their visualization,
+        as well as limiting the directory depth of the visualization to prevent the graph from becoming
+        too cluttered for larger directories.
+        <br /><br />
+        <img class="img-left" src="Projects/DirectoryGrapher/Demo_Graph_TB.png" alt="Directory Grapher Project" />
+        <br />
+        The script is written in <b>Python</b> <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+        and uses the <a href="https://graphviz.org/" target="_blank">GraphViz</a> library for the visualization.
+        <br /><br />
+    </div>
+</div>
+<div id="Word Search Generator" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            Word Search Generator
+        </h2>
+        <br />
+        A simple Word Search puzzle creator. The user opens the application via the command line,
+        where they are introduced to the program and can enter parameters (color, board size, starting words)
+        to customize their experience. The user can also choose to leave out the starting words and
+        let the program randomly choose words from a large dictionary file.
+        <br /><br />
+        <img class="img-left" src="Projects/WordSearch/wordsearch.gif" alt="Word Search Program" />
+        <br />
+        This application was made using <b>Python</b>
+        <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+        and the <b>tKinter</b> framework for the UI.
+        <br /><br />
+    </div>
+</div>
+<div id="Frogger" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            Frogger
+        </h2>
+        <br />
+        For my final project in <b>EE 271: Digital Circuits and Systems</b>, I chose to implement the
+        Frogger Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
+        <br /><br />
+        <img class="img-left" src="Projects/Frogger/DE1_SoC_Board.JPG" alt="Altera DE1 SOC Board" />
+        <br />
+        <img class="img-left" src="Projects/Frogger/Frogger_Demo.gif" alt="Frogger Project Demo" />
+        <br />
+        This was made using <b>SystemVerilog</b>
+        <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />.
+        <br /><br />
+    </div>
+</div>
+<div id="UW Course Planner" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            UW Course Planner
+        </h2>
+        <br />
+        The UW Course Planner is basically a course management/lookup tool for all three UW Campuses.
+        It features prerequisite trees for every course that recursively outline all prerequisites
+        for any given course.
+        <br /><br />
+        <img class="img-left" src="Projects/UWCoursePlanner/EE233.png" alt="Course Prerequisite Tree" />
+        <br />
+        It also features schedule visualization on a campus map so that students can see where their
+        courses are located on campus.
+        <br /><br />
+        <img class="img-left" src="Projects/UWCoursePlanner/Map.PNG" alt="Course Prerequisite Tree" />
+        <br />
+        The backend of this web app was made with <b>Python</b>
+        <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" /> using the
+        <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a>
+        framework. The <a href="https://pandas.pydata.org/" target="_blank">pandas</a> library is used to manage course data and
+        <a href="https://graphviz.org/" target="_blank">GraphViz</a> is used to create the prerequisite trees. The
+        frontend is made using <b>HTML</b>, <b>CSS</b>,
+        <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <b>JavaScript</b>
+        <img class="iconInline invert" src="Icons/javascript.png" alt="JavaScript Icon" />.
+        The map is made with <a href="https://leafletjs.com/" target="_blank">Leaflet</a>.
+        <br /><br />
+    </div>
+</div>
+<div id="Basketball Statistics Tracking" class="hidden">
+    <div class="left-content">
+        <h2 class="left-header">
+            Basketball Statistics Tracking
+        </h2>
+        <br />
+        While playing intramural basketball this project idea came to mind. I wanted to create something
+        that would allow me to easily track statistics for each player in a basketball team. Using the
+        basic Java/Programming knowledge I got from the introductory CS courses at UW, I spent around 6 months
+        creating this app.
+        <br /><br />
+        <img class="img-left" src="Projects/BasketballStatisticsTracking/GetPlayersPanelwPlayers.png" alt="Basketball Statistics Tracking Main Menu" />
+        <br />
+        <img class="img-left" src="Projects/BasketballStatisticsTracking/ManagementPanelwBench.png" alt="Basketball Statistics Tracking Game Tracking" />
+        <br />
+        <img class="img-left" src="Projects/BasketballStatisticsTracking/BoxScoreTable.png" alt="Basketball Statistics Tracking Box Score" />
+        <br />
+        This project is made in <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
+        and the UI is made with <b>Java Swing</b>.
+        <br /><br />
+    </div>
+</div>
