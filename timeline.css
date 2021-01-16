@@ -1,0 +1,60 @@
+/*
+Style for Timeline.
+Most code initially from: https://www.w3schools.com/HOWTO/howto_css_timeline.asp
+with some modifications.
+*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 0.5%;
+    background-color: whitesmoke;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+/* Container around content */
+.container-timeline {
+    padding: 0.5rem 2.45rem;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Place the container to the right */
+.right-timeline {
+    box-sizing: border-box;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-timeline::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 20%;
+    width: 0;
+    left: 3.5%;
+    border: medium solid whitesmoke;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent whitesmoke transparent transparent;
+    box-sizing: border-box;
+}
+
+/* The actual content */
+.content {
+    color: black;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    background-color: whitesmoke;
+    position: relative;
+    box-sizing: border-box;
+}

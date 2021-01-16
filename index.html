@@ -13,19 +13,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="timeline.css">
 
     <link rel="icon" type="image/png" href="Icons/favicon.png"/>
     <script src="script.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
+    </script>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </head>
 <body>
     <div class="container left">
         <h1 id="mainHeader">Alex Eidt</h1><br />
-        <img id="main" class="mainFrame" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
+        <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
     </div>
     <div class="container right">
         <div class="altHeader">
             <h1>Alex Eidt</h1><br />
-            <img id="main" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
+            <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
             <hr />
         </div>
         <h2>About</h2>
@@ -61,7 +69,8 @@
             </div>
         </div>
         <br />
-        <h2><a href="#" onclick="toggleLeft(this);">Coursework</a></h2>
+        <!--<h2 class="link" onclick="toggleLeft(this);">Timeline</h2>-->
+        <h2 class="link" onclick="toggleLeft(this);">Coursework</h2>
         <p>
             <div id="courses">
                 <ul>
@@ -115,7 +124,7 @@
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
-            <h3><a href="#" onclick="toggleLeft(this);">Game of Life Simulator</a></h3>
+            <h3 class="link" onclick="toggleLeft(this);">Game of Life Simulator</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Game-of-Life-Simulator" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -137,11 +146,10 @@
             </div>
         </div>
         <p>
-            Use of Natural Language Processing concepts to figure out which words make up a
-            string of words with no spaces.
+            Use of Natural Language Processing concepts to build a word tokenizer from scratch.
         </p>
         <div class="projectHeader">
-            <h3><a href="#" onclick="toggleLeft(this);">Directory Grapher</a></h3>
+            <h3 class="link" onclick="toggleLeft(this);">Directory Grapher</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Directory-Grapher" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -172,7 +180,7 @@
             for editing the UW Solar site.
         </p>
         <div class="projectHeader">
-            <h3><a href="#" onclick="toggleLeft(this);">Word Search Generator</a></h3>
+            <h3 class="link" onclick="toggleLeft(this);">Word Search Generator</h3>
             <div>
                 <a href="https://github.com/AlexEidt/WordSearch" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -181,11 +189,12 @@
             </div>
         </div>
         <p>
-            A simple Word Search Generator using the tKinter UI that allows the user show the solution on the board, 
-            reshuffle the current words, or create a new board with new words.
+            A Word Search Generator using the tKinter UI framework that allows the user
+            to create randomized/customized word search puzzles. The board can be
+            reshuffled with existing or new words and solutions can be shown.
         </p>
         <div class="projectHeader">
-            <h3><a href="#" onclick="toggleLeft(this);">Frogger</a></h3>
+            <h3 class="link" onclick="toggleLeft(this);">Frogger</h3>
             <div>
                 <!--
                 <a href="https://github.com/AlexEidt/Frogger" target="_blank">
@@ -200,7 +209,7 @@
             final project.
         </p>
         <div class="projectHeader">
-            <h3><a href="#" onclick="toggleLeft(this);">UW Course Planner</a></h3>
+            <h3 class="link" onclick="toggleLeft(this);">UW Course Planner</h3>
             <div>
                 <a href="https://github.com/AlexEidt/UW-Course-Planner" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -211,17 +220,16 @@
         </div>
         <p>
             The <a href="https://alexeidt.pythonanywhere.com/" target="_blank">UW Course Planner</a> 
-            is a Web App with schedule visualization on a campus map,
-            recursive course prerequisite tree generation and course keyword search for courses
-            offered at the University of Washington.
-            I also built a library called <a href="https://pypi.org/project/uwtools/" target="_blank">uwtools</a> 
+            is a Web App with schedule visualization on a campus map, course prerequisite tree generation
+            and course keyword search for courses offered at UW. I also built a library called
+            <a href="https://pypi.org/project/uwtools/" target="_blank">uwtools</a> 
             <a href="https://github.com/AlexEidt/uwtools" target="_blank">
                 <img class="iconInline" src="Icons/github.png" title="Check out uwtools on GitHub!" alt="GitHub Icon" />
             </a>
             to parse course data from the UW course catalog and time schedule.
         </p>
         <div class="projectHeader">
-            <h3><a href="#" onclick="toggleLeft(this);">Basketball Statistics Tracking</a></h3>
+            <h3 class="link" onclick="toggleLeft(this);">Basketball Statistics Tracking</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Basketball-Statistics-Tracking" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -230,8 +238,8 @@
             </div>
         </div>
         <p>
-            To keep track of player statistics for my Intramural Basketball Team, I built an application in
-            Java. I used Java Swing to create an intuitive UI for creating teams and adding statistics.
+            To keep track of player statistics for my Intramural Basketball Team, I built an application using
+            Java Swing to create an intuitive UI for creating teams and adding statistics.
         </p>
         <h2>Interests</h2>
         <br />
@@ -266,14 +274,14 @@
 
 <div id="storage" class="hidden"></div>
 <div id="Coursework" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
-            Coursework @ 
             <span>
                 <a href="https://www.washington.edu/" target="_blank">
                     <img id="uwIcon" class="invert" src="Icons/uw.png" alt="UW Icon" />
                 </a>
             </span>
+            Coursework
         </h2>
         <br />
         <h2 class="left-h2-line">Year 1</h2>
@@ -320,29 +328,40 @@
         <b>EE 418</b>: Network Security and Cryptography<br />
         <b>CSE 373</b>: Data Structures and Algorithms<br />
         <b>CSE 374</b>: Intermediate Programming Concepts and Tools<br />
-        <br />
-        <br />
+        <br /><br />
     </div>
 </div>
 <div id="Game of Life Simulator" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
             Game of Life Simulator
         </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Dec 2020 $\rightarrow$ Jan 2021
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+        </span>
+        <p>
+            This is a simulator I built for Conway's Game of Life. The Game of Life is a simple one-player
+            game (or simulation) where a set of four simple rules dictates which cells on a board survive
+            into the next generation. The user gives a certain starting condition and watches how cells
+            on a board grow and change.
+        </p>
+        <p>
+            The user can draw any starting condition they'd like and start/stop the simulation to make adjustments.
+            They can also step through each generation of the simulation to more closely see the changes.
+            The user can save the current state of the board to reload later as well as capture the current state
+            as a transparent PNG or record the simulation as a transparent GIF.
+        </p>
+        <img class="img-left centered" src="Projects/GameofLife/app.gif" alt="Game of Life App" />
         <br />
-        This is a simulator I built for Conway's Game of Life. The Game of Life is a simple one-player
-        game (or simulation) where a set of four simple rules dictates which cells on a board survive
-        into the next generation. The user gives a certain starting condition and watches how cells
-        on a board grow and change.
-        <br /><br />
-        <img class="img-left" src="Projects/GameofLife/app.gif" alt="Game of Life App" />
-        <br />
-        The app is built in <b>Kotlin</b> 
-        <img class="iconInline invert" src="Icons/kotlin.png" alt="Kotlin Icon" /> and the UI is made with
-        <b>Kotlin Swing</b>. I used <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Kotlin Icon" />
-        for the PNG screenshot and GIF creation. Below are some examples of what the PNG screenshot and GIF
-        recording look like.
-        <br /><br />
+        <p>
+            The app is built in <b>Kotlin</b> 
+            <img class="iconInline invert" src="Icons/kotlin.png" alt="Kotlin Icon" /> and the UI is made with
+            <b>Kotlin Swing</b>. I used <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Kotlin Icon" />
+            for the PNG screenshot and GIF creation. Below are some examples of what the PNG screenshot and GIF
+            recording look like.
+        </p>
         <div class="row">
             <div class="col">
                 <img style="width: 100%" class="invert" src="Projects/GameofLife/recording.gif" alt="Game of Life GIF" />
@@ -351,112 +370,195 @@
                 <img style="width: 100%" class="invert" src="Projects/GameofLife/snapshot.png" alt="Game of Life Snapshot" />
             </div>
         </div>
-        <br /><br />
+        <br />
     </div>
 </div>
 <div id="Directory Grapher" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
             Directory Grapher
         </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Nov 2020
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+        </span>
+        <p>
+            The Directory Grapher is a simple tool for visualizing the entire structure of any directory.
+            There are different options and orientations the user can specify to customize their visualization,
+            as well as limiting the depth of the visualization to prevent the graph from becoming
+            too cluttered.
+        </p>
+        <img class="img-left centered" src="Projects/DirectoryGrapher/Demo_Graph_TB.png" alt="Directory Grapher Project" />
         <br />
-        The Directory Grapher is a simple tool for visualizing the entire structure of any directory.
-        There are different options and orientations the user can specify to customize their visualization,
-        as well as limiting the directory depth of the visualization to prevent the graph from becoming
-        too cluttered for larger directories.
-        <br /><br />
-        <img class="img-left" src="Projects/DirectoryGrapher/Demo_Graph_TB.png" alt="Directory Grapher Project" />
+        <p>
+            The script is written in <b>Python</b> <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+            and uses the <a href="https://graphviz.org/" target="_blank">GraphViz</a> library for the visualization.    
+        </p>
         <br />
-        The script is written in <b>Python</b> <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-        and uses the <a href="https://graphviz.org/" target="_blank">GraphViz</a> library for the visualization.
-        <br /><br />
     </div>
 </div>
 <div id="Word Search Generator" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
             Word Search Generator
         </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Jun 2020
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+        </span>
+        <p>
+            A simple Word Search puzzle creator. The user opens the application via the command line,
+            where they are introduced to the program and can enter parameters (color, board size, starting words)
+            to customize their experience. The user can also choose to leave out the starting words and
+            let the program randomly choose words from a large dictionary file.
+        </p>
+        <img class="img-left centered" src="Projects/WordSearch/wordsearch.gif" alt="Word Search Program" />
         <br />
-        A simple Word Search puzzle creator. The user opens the application via the command line,
-        where they are introduced to the program and can enter parameters (color, board size, starting words)
-        to customize their experience. The user can also choose to leave out the starting words and
-        let the program randomly choose words from a large dictionary file.
-        <br /><br />
-        <img class="img-left" src="Projects/WordSearch/wordsearch.gif" alt="Word Search Program" />
+        <p>
+            This application was made using <b>Python</b>
+            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+            and the <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">tKinter</a>
+            framework for the UI.
+        </p>
         <br />
-        This application was made using <b>Python</b>
-        <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-        and the <b>tKinter</b> framework for the UI.
-        <br /><br />
     </div>
 </div>
 <div id="Frogger" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
             Frogger
         </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Feb 2020 $\rightarrow$ Mar 2020
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+        </span>
+        <p>
+            For my final project in <b>EE 271: Digital Circuits and Systems</b>, I chose to implement the
+            Frogger Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
+        </p>
+        <img class="img-left centered" src="Projects/Frogger/DE1_SoC_Board.JPG" alt="Altera DE1 SOC Board" />
         <br />
-        For my final project in <b>EE 271: Digital Circuits and Systems</b>, I chose to implement the
-        Frogger Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
-        <br /><br />
-        <img class="img-left" src="Projects/Frogger/DE1_SoC_Board.JPG" alt="Altera DE1 SOC Board" />
+        <img class="img-left centered" src="Projects/Frogger/Frogger_Demo.gif" alt="Frogger Project Demo" />
         <br />
-        <img class="img-left" src="Projects/Frogger/Frogger_Demo.gif" alt="Frogger Project Demo" />
+        <p>
+            This project was made using <b>SystemVerilog</b>
+            <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />.
+        </p>
         <br />
-        This was made using <b>SystemVerilog</b>
-        <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />.
-        <br /><br />
     </div>
 </div>
 <div id="UW Course Planner" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
             UW Course Planner
         </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Jul 2019 $\rightarrow$ Sept 2019
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+        </span>
+        <p>
+            I got the idea for this project while at the
+            <a href="https://www.hackathon.io/angelhack-2019-seattle" target="_blank">AngelHack 2019 Hackathon</a>
+            in Seattle. I went with a friend and pitched the idea. It was my first time working with Python, so I was
+            learning the language while working on this project. We worked deep into the night and unfortunately
+            didn't get anywhere. The next day, we both left the Hackathon early, and I took it upon myself to
+            go back to the drawing board and rebuild the project from the ground up. After putting most of my summer
+            break into it, I finally completed the project and had built a foundation in Python.
+        </p>
+        <p>
+            After successful completion of the project, I reached out to UW IT to let them know about it.
+            I presented the project to the UW IT Academic Experience Design & Delivery Team to improve
+            <a href="https://myplan.uw.edu/home/#/" target="_blank">MyPlan</a>, the existing course management
+            tool at UW. The meeting went well and actually led to a course keyword search feature being added
+            to MyPlan!
+        </p>
+        <p>
+            The UW Course Planner is basically a course management/lookup tool for all three UW Campuses.
+            It features prerequisite trees for every course that recursively outline all prerequisites
+            for any given course.
+        </p>
+        <img class="img-left centered" src="Projects/UWCoursePlanner/EE233.png" alt="Course Prerequisite Tree" />
         <br />
-        The UW Course Planner is basically a course management/lookup tool for all three UW Campuses.
-        It features prerequisite trees for every course that recursively outline all prerequisites
-        for any given course.
-        <br /><br />
-        <img class="img-left" src="Projects/UWCoursePlanner/EE233.png" alt="Course Prerequisite Tree" />
+        <p>
+            It also features schedule visualization on a campus map so that students can see where their
+            courses are located on campus.
+        </p>
+        <img class="img-left centered" src="Projects/UWCoursePlanner/Map.PNG" alt="Schedule Visualization on Campus Map" />
         <br />
-        It also features schedule visualization on a campus map so that students can see where their
-        courses are located on campus.
-        <br /><br />
-        <img class="img-left" src="Projects/UWCoursePlanner/Map.PNG" alt="Course Prerequisite Tree" />
+        <p>
+            Additionally, it features a keyword search for course descriptions.
+        </p>
+        <img class="img-left centered" src="Projects/UWCoursePlanner/KeywordSearch.PNG" alt="Course Keyword Search" />
         <br />
-        The backend of this web app was made with <b>Python</b>
-        <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" /> using the
-        <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a>
-        framework. The <a href="https://pandas.pydata.org/" target="_blank">pandas</a> library is used to manage course data and
-        <a href="https://graphviz.org/" target="_blank">GraphViz</a> is used to create the prerequisite trees. The
-        frontend is made using <b>HTML</b>, <b>CSS</b>,
-        <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <b>JavaScript</b>
-        <img class="iconInline invert" src="Icons/javascript.png" alt="JavaScript Icon" />.
-        The map is made with <a href="https://leafletjs.com/" target="_blank">Leaflet</a>.
-        <br /><br />
+        <p>
+            In order to get all the data to display on this website, I built a library called
+            <a href="https://pypi.org/project/uwtools/" target="_blank">uwtools</a>
+            that parses the UW Time Schedule and Course Catalogs into Dictionaries and DataFrames. It's basically a web scraper using
+            <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">BeautifulSoup</a>
+            and <a href="https://pandas.pydata.org/" target="_blank">pandas</a>.
+        </p>
+        <p>
+            The backend of this web app was made with <b>Python</b>
+            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" /> using the
+            <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a>
+            framework. The <a href="https://pandas.pydata.org/" target="_blank">pandas</a> library is used to manage course data and
+            <a href="https://graphviz.org/" target="_blank">GraphViz</a> is used to create the prerequisite trees. The
+            frontend is made using <b>HTML</b>, <b>CSS</b>,
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <b>JavaScript</b>
+            <img class="iconInline invert" src="Icons/javascript.png" alt="JavaScript Icon" />.
+            The map is made with <a href="https://leafletjs.com/" target="_blank">Leaflet</a>.
+        </p>
+        <br />
     </div>
 </div>
 <div id="Basketball Statistics Tracking" class="hidden">
-    <div class="left-content">
+    <div class="left-content centered">
         <h2 class="left-header">
             Basketball Statistics Tracking
         </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Jan 2019 $\rightarrow$ Aug 2019
+            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+        </span>
+        <p>
+            While playing intramural basketball this project idea came to mind. I wanted to create something
+            that would allow me to easily track statistics for each player in a basketball team. Using the
+            basic Java/Programming knowledge I got from the introductory CS courses at UW, I spent around 8 months
+            creating this app.
+        </p>
+        <img class="img-left centered" src="Projects/BasketballStatisticsTracking/basketballdoc.gif" alt="Basketball Statistics Tracking Documentation GIF" />
         <br />
-        While playing intramural basketball this project idea came to mind. I wanted to create something
-        that would allow me to easily track statistics for each player in a basketball team. Using the
-        basic Java/Programming knowledge I got from the introductory CS courses at UW, I spent around 6 months
-        creating this app.
-        <br /><br />
-        <img class="img-left" src="Projects/BasketballStatisticsTracking/GetPlayersPanelwPlayers.png" alt="Basketball Statistics Tracking Main Menu" />
+        <p>
+            This project is made in <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
+            and the UI is made with <b>Java Swing</b>.
+        </p>
         <br />
-        <img class="img-left" src="Projects/BasketballStatisticsTracking/ManagementPanelwBench.png" alt="Basketball Statistics Tracking Game Tracking" />
-        <br />
-        <img class="img-left" src="Projects/BasketballStatisticsTracking/BoxScoreTable.png" alt="Basketball Statistics Tracking Box Score" />
-        <br />
-        This project is made in <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
-        and the UI is made with <b>Java Swing</b>.
-        <br /><br />
+    </div>
+</div>
+<div id="Timeline" class="hidden">
+    <div class="timeline">
+        <div class="container-timeline right-timeline">
+            <div class="content">
+            <h2>2016</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
+        <div class="container-timeline right-timeline">
+            <div class="content">
+            <h2>2012</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
+        <div class="container-timeline right-timeline">
+            <div class="content">
+            <h2>2007</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+        </div>
     </div>
 </div>
