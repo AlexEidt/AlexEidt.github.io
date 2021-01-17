@@ -31,17 +31,18 @@ function toggle(self) {
 
 // Toggle Left side of screen when Link is clicked.
 function toggleLeft(self) {
-    const left = document.getElementsByClassName('left')[0];
-    if (left.style.width === '0%') {
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w < 550) {
         return null;
     }
+    const left = document.getElementsByClassName('left')[0];
     // Scroll to top of left container on click.
     left.scroll({
         top: 0, 
         left: 0, 
         behavior: 'smooth'
     });
-    if (left.innerHTML.includes('Alex Eidt')) {
+    if (left.innerHTML.includes('mainFrame')) {
         document.getElementById('storage').innerHTML = left.innerHTML;
     }
     const leftHeader = left.getElementsByClassName('left-header');
@@ -54,5 +55,18 @@ function toggleLeft(self) {
         left.style.width = '55%';
         document.getElementsByClassName('right')[0].style.width = '45%';
     }
-    return null;
 }
+
+// Remove styles on small page styles to allow CSS media query to work.
+window.onresize = function() {
+    // w -> Width of page.
+    const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const left = document.getElementsByClassName('left')[0];
+    if (w < 550) {
+        left.style = '';
+        document.getElementsByClassName('right')[0].style = '';
+        if (!left.innerHTML.includes('mainFrame')) {
+            left.innerHTML = document.getElementById('storage').innerHTML;
+        }
+    }
+};

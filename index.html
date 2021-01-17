@@ -16,18 +16,11 @@
 
     <link rel="icon" type="image/png" href="Icons/favicon.png"/>
     <script src="script.js"></script>
-
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]}});
-    </script>
-    <script type="text/javascript"
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
 </head>
 <body>
     <div class="container left">
         <h1 id="mainHeader">Alex Eidt</h1><br />
-        <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
+        <img id="main" class="mainFrame centered invert" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
     </div>
     <div class="container right">
         <div class="altHeader">
@@ -67,8 +60,12 @@
                 <a class="removeOnSmall" href="https://www.linkedin.com/in/alex-eidt-366b4b200/" target="_blank">LinkedIn</a>
             </div>
         </div>
+        <!--
         <br />
-        <h2 class="link" onclick="toggleLeft(this);">Timeline</h2>
+        <h2 class="link remove" onclick="toggleLeft(this);">Skills</h2>-->
+        <br />
+        <h2 class="link remove" onclick="toggleLeft(this);">Timeline</h2>
+        <br />
         <h2 class="link" onclick="toggleLeft(this);">Coursework</h2>
         <p>
             <div id="courses">
@@ -189,7 +186,7 @@
         </div>
         <p>
             A Word Search Generator using the tKinter UI framework that allows the user
-            to create randomized/customized word search puzzles. The board can be
+            to create randomized and customized word search puzzles. The board can be
             reshuffled with existing or new words and solutions can be shown.
         </p>
         <div class="projectHeader">
@@ -337,8 +334,7 @@
         </h2>
         <span class="calendar centered">
             <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
-            Dec 2020 $\rightarrow$ Jan 2021
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Dec 2020 - Jan 2021
         </span>
         <p>
             This is a simulator I built for Conway's Game of Life. The Game of Life is a simple one-player
@@ -380,7 +376,6 @@
         <span class="calendar centered">
             <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
             Nov 2020
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
         </span>
         <p>
             The Directory Grapher is a simple tool for visualizing the entire structure of any directory.
@@ -405,7 +400,6 @@
         <span class="calendar centered">
             <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
             Jun 2020
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
         </span>
         <p>
             A simple Word Search puzzle creator. The user opens the application via the command line,
@@ -431,8 +425,7 @@
         </h2>
         <span class="calendar centered">
             <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
-            Feb 2020 $\rightarrow$ Mar 2020
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Feb 2020 - Mar 2020
         </span>
         <p>
             For my final project in <b>EE 271: Digital Circuits and Systems</b>, I chose to implement the
@@ -456,8 +449,7 @@
         </h2>
         <span class="calendar centered">
             <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
-            Jul 2019 $\rightarrow$ Sept 2019
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Jul 2019 - Sept 2019
         </span>
         <p>
             I got the idea for this project while at the
@@ -521,8 +513,7 @@
         </h2>
         <span class="calendar centered">
             <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
-            Jan 2019 $\rightarrow$ Aug 2019
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            Jan 2019 - Aug 2019
         </span>
         <p>
             While playing intramural basketball this project idea came to mind. I wanted to create something
@@ -541,7 +532,12 @@
 </div>
 <div id="Timeline" class="hidden">
     <div class="left-content centered">
-        <h2 class="left-header">Timeline</h2>
+        <h2 class="left-header">
+            <span>
+                Timeline
+                <img class="classIcon invert" src="Icons/timeline.gif" alt="Hourglass Filling GIF" />
+            </span>
+        </h2>
         <br />
         <div class="row">
             <div class="col-2"><img class="invert timeline-icon-year" src="Icons/year.png" alt="Year Icon" title="2020"/></div>
@@ -562,22 +558,18 @@
                         <img class="invert timeline-icon" src="Icons/uwremote.png" alt="UW Remote Icon" title="UW Remote Learning" />
                     </div>
                 </div>
-                <b>
-                    Word Separator<br />
-                    Directory Grapher<br />
-                    Personal Website
-                </b>
+                Word Separator<br />
+                <div class="link" onclick="toggleLeft(this);">Directory Grapher</div>
+                Personal Website
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-2"><img class="invert timeline-icon" src="Icons/summer.png" alt="Summer Icon" title="Summer 2020"/></div>
             <div class="col timeline-data">
-                <b>
-                    End of UW Solar<br />
-                    UW Solar/UIL Websites<br />
-                    Word Search Generator
-                </b>
+                End of UW Solar<br />
+                UW Solar/UIL Websites<br />
+                <div class="link" onclick="toggleLeft(this);">Word Search Generator</div>
             </div>
         </div>
         <br />
@@ -614,9 +606,7 @@
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <b>
-                    Frogger
-                </b>
+                <div class="link" onclick="toggleLeft(this);">Frogger</div>
             </div>
         </div>
         <br />
@@ -645,10 +635,8 @@
         <div class="row">
             <div class="col-2"><img class="invert timeline-icon" src="Icons/summer.png" alt="Summer Icon" title="Summer 2019"/></div>
             <div class="col timeline-data">
-                <b>
-                    UW Course Planner<br />
-                    Manastash Ridge Observatory
-                </b>
+                <div class="link" onclick="toggleLeft(this);">UW Course Planner</div>
+                Manastash Ridge Observatory
             </div>
         </div>
         <br />
@@ -684,9 +672,7 @@
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <b>
-                    Basketball Statistics Tracking
-                </b>
+                <div class="link" onclick="toggleLeft(this);">Basketball Statistics Tracking</div>
             </div>
         </div>
         <br />
@@ -716,5 +702,22 @@
             </div>
         </div>
         <br />
+    </div>
+</div>
+<div id="Skills" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            <span>
+                Skills
+                <img class="classIcon invert" src="Icons/puzzle.png" alt="Puzzle Icon" />
+            </span>
+        </h2>
+        <h3 class="left-h3">Python</h3>
+        <h3 class="left-h3">Java</h3>
+        <h3 class="left-h3">Kotlin</h3>
+        <h3 class="left-h3">Javascript</h3>
+        <h3 class="left-h3">HTML/CSS</h3>
+        <h3 class="left-h3">Git/Github</h3>
+        <h3 class="left-h3">Verilog</h3>
     </div>
 </div>
