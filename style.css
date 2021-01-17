@@ -91,6 +91,7 @@ img.largeIcon {
 img.mainFrame {
     width: 50%;
     padding-bottom: 10vh;
+    /* The following filters approximate the "whitesmoke" color. */
     -webkit-filter: invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
     filter: invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
     transition: 0.6s;
@@ -109,7 +110,7 @@ a:hover {
 /* Image links get hover effect. */
 a img:hover {
     transition: 0.4s;
-    filter: opacity(40%);
+    filter: blur(1px);
 }
 
 /* Elements that act as links, but aren't. */
@@ -165,8 +166,9 @@ img.iconInline {
 
 /* For images that should be inverted. */
 .invert {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+    /* The following filters approximate the "whitesmoke" color. */
+    -webkit-filter: invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
+    filter: invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
 }
 
 /* For elements that should be centered. */
@@ -191,7 +193,7 @@ img.iconInline {
 /* Content that appears on left side when links are clicked. */
 .left-content {
     padding-top: 5vh;
-    width: 85%;
+    width: 95%;
 }
 
 /* Underline of h2 elements in left side. */
@@ -211,7 +213,6 @@ h3.left-h3 {
 
 /* Header for content in left container. */
 .left-header {
-    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -225,6 +226,49 @@ h3.left-h3 {
 /* Elements to be hidden. */
 .hidden {
     display: none;
+}
+
+.timeline-icon, .timeline-icon-year {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 3rem;
+}
+
+.timeline-icon-year {
+    width: 4.5rem;
+}
+
+.timeline-year {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: right;
+}
+
+.timeline-data {
+    display: block;
+}
+
+/* Timeline coursework. */
+.timeline-courses {
+    background-image: 
+      linear-gradient(whitesmoke, whitesmoke),
+      linear-gradient(whitesmoke, whitesmoke);
+    
+    background-repeat: no-repeat;
+    background-size: 8px 3px;
+    background-position: top right, bottom right;
+  
+    border: solid whitesmoke;
+    border-width: 0 5px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-uw {
+    visibility: hidden;
 }
 
 /* Reformat website for smaller screen sizes */
@@ -264,5 +308,14 @@ h3.left-h3 {
 @media only screen and (min-width: 950px) {
     div.projectHeader {
         display: flex;
+    }
+    .timeline-year {
+        text-align: left;
+    }
+    .left-content {
+        width: 85%;
+    }
+    .timeline-uw {
+        visibility: visible;
     }
 }
