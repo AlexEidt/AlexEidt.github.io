@@ -39,33 +39,33 @@
                 <a href="mailto:alex.eidt@outlook.com">
                     <img class="largeIcon" src="Icons/email.png" title="Email" alt="Email Icon" />
                 </a>
-                <a class="removeOnSmall" href="mailto:alex.eidt@outlook.com">alex.eidt@outlook.com</a>
+                <a class="removeOnMedium" href="mailto:alex.eidt@outlook.com">alex.eidt@outlook.com</a>
             </div>
             <div>
                 <a href="Resume.pdf" target="_blank">
                     <img class="largeIcon" src="Icons/resume.png" title="Resume" alt="Resume Icon" />
                 </a>
-                <a class="removeOnSmall" href="Resume.pdf" target="_blank">Resume</a>
+                <a class="removeOnMedium" href="Resume.pdf" target="_blank">Resume</a>
             </div>
             <div>
                 <a href="https://github.com/AlexEidt" target="_blank">
                     <img class="largeIcon" src="Icons/github.png" title="GitHub" alt="GitHub Icon" />
                 </a>
-                <a class="removeOnSmall" href="https://github.com/AlexEidt" target="_blank">GitHub</a>
+                <a class="removeOnMedium" href="https://github.com/AlexEidt" target="_blank">GitHub</a>
             </div>
             <div>
                 <a href="https://www.linkedin.com/in/alex-eidt-366b4b200/" target="_blank">
                     <img class="largeIcon" src="Icons/linkedin.png" title="LinkedIn" alt="LinkedIn Icon" />
                 </a>
-                <a class="removeOnSmall" href="https://www.linkedin.com/in/alex-eidt-366b4b200/" target="_blank">LinkedIn</a>
+                <a class="removeOnMedium" href="https://www.linkedin.com/in/alex-eidt-366b4b200/" target="_blank">LinkedIn</a>
             </div>
         </div>
         <!--
         <br />
-        <h2 class="link remove" onclick="toggleLeft(this);">Skills</h2>-->
+        <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Skills</h2>-->
         <br />
-        <h2 class="link remove" onclick="toggleLeft(this);">Timeline</h2>
-        <br />
+        <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Timeline</h2>
+        <br /><br />
         <h2 class="link" onclick="toggleLeft(this);">Coursework</h2>
         <p>
             <div id="courses">
@@ -266,7 +266,6 @@
         <br />
     </div>
 </body>
-</html>
 
 <div id="storage" class="hidden"></div>
 <div id="Coursework" class="hidden">
@@ -274,7 +273,7 @@
         <h2 class="left-header">
             <span>
                 <a href="https://www.washington.edu/" target="_blank">
-                    <img id="uwIcon" class="invert" src="Icons/uw.png" alt="UW Icon" />
+                    <img id="uwIcon" class="invert invertedLink" src="Icons/uw.png" alt="UW Icon" />
                 </a>
             </span>
             Coursework
@@ -333,7 +332,7 @@
             Game of Life Simulator
         </h2>
         <span class="calendar centered">
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Game of Life Simulator');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
             Dec 2020 - Jan 2021
         </span>
         <p>
@@ -374,7 +373,7 @@
             Directory Grapher
         </h2>
         <span class="calendar centered">
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Directory Grapher');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
             Nov 2020
         </span>
         <p>
@@ -398,7 +397,7 @@
             Word Search Generator
         </h2>
         <span class="calendar centered">
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Word Search Generator');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
             Jun 2020
         </span>
         <p>
@@ -424,7 +423,7 @@
             Frogger
         </h2>
         <span class="calendar centered">
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Frogger');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
             Feb 2020 - Mar 2020
         </span>
         <p>
@@ -448,7 +447,7 @@
             UW Course Planner
         </h2>
         <span class="calendar centered">
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'UW Course Planner');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
             Jul 2019 - Sept 2019
         </span>
         <p>
@@ -512,7 +511,7 @@
             Basketball Statistics Tracking
         </h2>
         <span class="calendar centered">
-            <img class="largeIcon invert" src="Icons/calendar.png" alt="Calendar Icon" />
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Basketball Statistics Tracking');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
             Jan 2019 - Aug 2019
         </span>
         <p>
@@ -559,7 +558,7 @@
                     </div>
                 </div>
                 Word Separator<br />
-                <div class="link" onclick="toggleLeft(this);">Directory Grapher</div>
+                <div id="Directory Grapher ID" class="link" onclick="toggleLeft(this);">Directory Grapher</div>
                 Personal Website
             </div>
         </div>
@@ -569,7 +568,7 @@
             <div class="col timeline-data">
                 End of UW Solar<br />
                 UW Solar/UIL Websites<br />
-                <div class="link" onclick="toggleLeft(this);">Word Search Generator</div>
+                <div id="Word Search Generator ID" class="link" onclick="toggleLeft(this);">Word Search Generator</div>
             </div>
         </div>
         <br />
@@ -606,7 +605,7 @@
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <div class="link" onclick="toggleLeft(this);">Frogger</div>
+                <div id="Frogger ID" class="link" onclick="toggleLeft(this);">Frogger</div>
             </div>
         </div>
         <br />
@@ -635,7 +634,7 @@
         <div class="row">
             <div class="col-2"><img class="invert timeline-icon" src="Icons/summer.png" alt="Summer Icon" title="Summer 2019"/></div>
             <div class="col timeline-data">
-                <div class="link" onclick="toggleLeft(this);">UW Course Planner</div>
+                <div id="UW Course Planner ID" class="link" onclick="toggleLeft(this);">UW Course Planner</div>
                 Manastash Ridge Observatory
             </div>
         </div>
@@ -672,7 +671,7 @@
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <div class="link" onclick="toggleLeft(this);">Basketball Statistics Tracking</div>
+                <div id="Basketball Statistics Tracking ID" class="link" onclick="toggleLeft(this);">Basketball Statistics Tracking</div>
             </div>
         </div>
         <br />
@@ -721,3 +720,5 @@
         <h3 class="left-h3">Verilog</h3>
     </div>
 </div>
+
+</html>

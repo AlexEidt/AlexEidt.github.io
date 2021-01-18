@@ -30,30 +30,37 @@ function toggle(self) {
 }
 
 // Toggle Left side of screen when Link is clicked.
-function toggleLeft(self) {
+function toggleLeft(self, id) {
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (w < 550) {
         return null;
     }
     const left = document.getElementsByClassName('left')[0];
-    // Scroll to top of left container on click.
-    left.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth'
-    });
+    if (self !== 'Timeline') {
+        // Scroll to top of left container on click.
+        left.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth'
+        });
+    }
     if (left.innerHTML.includes('mainFrame')) {
         document.getElementById('storage').innerHTML = left.innerHTML;
     }
     const leftHeader = left.getElementsByClassName('left-header');
-    if (leftHeader.length > 0 && leftHeader[0].innerHTML.includes(self.innerHTML)) {
+    if (leftHeader.length > 0 && leftHeader[0].innerHTML.includes(self.innerHTML || self)) {
         left.innerHTML = document.getElementById('storage').innerHTML;
         left.style.width = '40%';
         document.getElementsByClassName('right')[0].style.width = '60%';
     } else {
-        left.innerHTML = document.getElementById(self.innerHTML).innerHTML;
+        left.innerHTML = document.getElementById(self.innerHTML || self).innerHTML;
         left.style.width = '55%';
         document.getElementsByClassName('right')[0].style.width = '45%';
+    }
+    if (self === 'Timeline') {
+        document.getElementById(`${id} ID`).scrollIntoView({
+            block: 'center'
+        });
     }
 }
 

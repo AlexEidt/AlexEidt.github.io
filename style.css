@@ -109,8 +109,16 @@ a img:hover {
     filter: blur(1px);
 }
 
-/* Text to remove when screen size is small. */
-.removeOnSmall {
+/* Icons that are inverted get blur hover effect. */
+.invertedLink:hover {
+    /* The following filters approximate the "whitesmoke" color. */
+    -webkit-filter: blur(1px) invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
+    filter: blur(1px) invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
+    cursor: pointer;
+}
+
+/* Elements to remove on various screen sizes. */
+.removeOnSmall, .removeOnMedium, .removeOnLarge {
     display: none;
 }
 
@@ -233,7 +241,7 @@ h3.left-h3 {
     display: block;
 }
 
-/* Timeline coursework. */
+/* Timeline coursework brackets. */
 .timeline-courses {
     background-image: 
         linear-gradient(whitesmoke, whitesmoke),
@@ -254,11 +262,6 @@ h3.left-h3 {
 /* UW Icons in Timeline. */
 .timeline-uw {
     visibility: hidden;
-}
-
-/* Psuedo-links to remove on small screen sizes. */
-.remove {
-    display: none;
 }
 
 /* Reformat website for smaller screen sizes */
@@ -293,13 +296,13 @@ h3.left-h3 {
         font-style: italic;
         cursor: pointer;
     }
-    .remove {
+    .removeOnSmall {
         display: inline;
     }
 }
 
 @media only screen and (min-width: 650px) {
-    .removeOnSmall {
+    .removeOnMedium {
         display: inline;
     }
     div.iconStack {
@@ -320,5 +323,11 @@ h3.left-h3 {
     }
     .timeline-uw {
         visibility: visible;
+    }
+    .removeOnLarge {
+        display: inline;
+    }
+    .addOnLarge {
+        display: none;
     }
 }
