@@ -20,7 +20,7 @@
 <body>
     <div class="container left">
         <h1 id="mainHeader">Alex Eidt</h1><br />
-        <img id="main" class="mainFrame centered invert" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
+        <img id="main" class="mainFrame centered invert link fadeIn" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
     </div>
     <div class="container right">
         <div class="altHeader">
@@ -60,10 +60,11 @@
                 <a class="removeOnMedium" href="https://www.linkedin.com/in/alex-eidt-366b4b200/" target="_blank">LinkedIn</a>
             </div>
         </div>
+        <br />
         <!--
-        <br />
-        <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Skills</h2>-->
-        <br />
+        <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Skills</h2>
+        <br /><br />
+        -->
         <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Timeline</h2>
         <br /><br />
         <h2 class="link" onclick="toggleLeft(this);">Coursework</h2>
@@ -256,7 +257,7 @@
             Biking. Exercise and exploration.
         </div>
         <div>
-            <img class="largeIcon" src="Icons/python.png" alt="Python Icon" onclick="toggle(this);" />
+            <img class="largeIcon blurOnHover" src="Icons/python.png" alt="Python Icon" onclick="toggle(this);" />
             Coding. Python is my favorite.
         </div>
         <br />
@@ -266,6 +267,7 @@
         <br />
     </div>
 </body>
+</html>
 
 <div id="storage" class="hidden"></div>
 <div id="Coursework" class="hidden">
@@ -461,7 +463,8 @@
         </p>
         <p>
             After successful completion of the project, I reached out to UW IT to let them know about it.
-            I presented the project to the UW IT Academic Experience Design & Delivery Team to improve
+            I presented the project to the <a href="https://www.washington.edu/uwit/divisions/as/aca/" target="_blank">
+            UW IT Academic Experience Design & Delivery Team</a> to improve
             <a href="https://myplan.uw.edu/home/#/" target="_blank">MyPlan</a>, the existing course management
             tool at UW. The meeting went well and actually led to a course keyword search feature being added
             to MyPlan!
@@ -549,7 +552,10 @@
                 <div class="row">
                     <div class="col-10 timeline-courses">
                         <b>MATH 324</b>: Multivariable Calculus<br />
-                        <b>EE 418</b>: Network Security and Cryptography<br />
+                        <div>
+                            <b>EE 418</b>: Network Security and Cryptography
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                         <b>CSE 373</b>: Data Structures and Algorithms<br />
                         <b>CSE 374</b>: Intermediate Programming Concepts and Tools<br />
                     </div>
@@ -557,18 +563,38 @@
                         <img class="invert timeline-icon" src="Icons/uwremote.png" alt="UW Remote Icon" title="UW Remote Learning" />
                     </div>
                 </div>
-                Word Separator<br />
-                <div id="Directory Grapher ID" class="link" onclick="toggleLeft(this);">Directory Grapher</div>
-                Personal Website
+                <div>
+                    Word Separator
+                    <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
+                </div>
+                <div id="Directory Grapher ID" class="link" onclick="toggleLeft('Directory Grapher');">
+                    Directory Grapher
+                    <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
+                </div>
+                <div>
+                    Personal Website
+                    <img class="invert classIcon" src="Icons/favicon.png" alt="Banana Icon" title="You're seeing it now!" />
+                </div>
             </div>
         </div>
         <br />
         <div class="row">
             <div class="col-2"><img class="invert timeline-icon" src="Icons/summer.png" alt="Summer Icon" title="Summer 2020"/></div>
             <div class="col timeline-data">
-                End of UW Solar<br />
-                UW Solar/UIL Websites<br />
-                <div id="Word Search Generator ID" class="link" onclick="toggleLeft(this);">Word Search Generator</div>
+                <div>
+                    End of UW Solar
+                    <img class="invert classIcon" src="Icons/uwsolar.png" alt="UW Solar Icon" title="Built with UW Solar" />
+                </div>
+                <div>
+                    UW Solar/UIL Websites
+                    <img class="invert classIcon" src="Icons/vuejs.png" alt="VueJS Icon" title="Built with VueJS" />
+                    <img class="invert classIcon" src="Icons/javascript.png" alt="Javascript Icon" title="Built with Javascript" />
+                    <img class="invert classIcon" src="Icons/wordpress.png" alt="WordPress Icon" title="Built with WordPress" />
+                </div>
+                <div id="Word Search Generator ID" class="link" onclick="toggleLeft('Word Search Generator');">
+                    Word Search Generator
+                    <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
+                </div>
             </div>
         </div>
         <br />
@@ -578,7 +604,10 @@
                 <div class="row">
                     <div class="col-10 timeline-courses">
                         <b>IND E 315</b>: Probability and Statistics for Engineers<br />
-                        <b>EE 233</b>: Circuit Theory<br />
+                        <div>
+                            <b>EE 233</b>: Circuit Theory
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                         <b>EE 235</b>: Continuous Time Linear Systems<br />
                         <b>CSE 351</b>: The Hardware/Software Interface<br />
                         <b>CSE 391</b>: System and Software Tools<br />
@@ -597,15 +626,24 @@
                     <div class="col-10 timeline-courses">
                         <b>MATH 307</b>: Differential Equations<br />
                         <b>EE 215</b>: Fundamentals of Electrical Engineering<br />
-                        <b>EE 271</b>: Digital Circuits and Systems<br />
+                        <div>
+                            <b>EE 271</b>: Digital Circuits and Systems
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                         <b>EE 398</b>: Professional Issues<br />
-                        <b>CSE 163</b>: Intermediate Data Programming<br />
+                        <div>
+                            <b>CSE 163</b>: Data Programming
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                     </div>
                     <div class="col-2 timeline-uw">
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <div id="Frogger ID" class="link" onclick="toggleLeft(this);">Frogger</div>
+                <div id="Frogger ID" class="link" onclick="toggleLeft('Frogger');">
+                    Frogger
+                    <img class="invert classIcon" src="Icons/verilog.png" alt="Verilog Icon" title="Built with SystemVerilog" />
+                </div>
             </div>
         </div>
         <br />
@@ -619,10 +657,16 @@
             <div class="col timeline-data">
                 <div class="row">
                     <div class="col-10 timeline-courses">
-                        <b>MATH 308</b>: Matrix Algebra<br />
+                        <div>
+                            <b>MATH 308</b>: Matrix Algebra
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                         <b>PHYS 123</b>: Waves<br />
                         <b>ENGR 231</b>: Introduction to Technical Communication<br />
-                        <b>CLAS 320</b>: Society and Status in Greece and Rome<br />
+                        <div>
+                            <b>CLAS 320</b>: Society and Status in Greece and Rome
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                     </div>
                     <div class="col-2 timeline-uw">
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
@@ -634,8 +678,15 @@
         <div class="row">
             <div class="col-2"><img class="invert timeline-icon" src="Icons/summer.png" alt="Summer Icon" title="Summer 2019"/></div>
             <div class="col timeline-data">
-                <div id="UW Course Planner ID" class="link" onclick="toggleLeft(this);">UW Course Planner</div>
-                Manastash Ridge Observatory
+                <div id="UW Course Planner ID" class="link" onclick="toggleLeft('UW Course Planner');">
+                    UW Course Planner
+                    <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
+                    <img class="invert classIcon" src="Icons/javascript.png" alt="Javascript Icon" title="Built with Javascript" />
+                </div>
+                <div>
+                    Manastash Ridge Observatory
+                    <img class="invert classIcon" src="Icons/telescope.png" alt="Telescope Icon" title="Trip to the Manastash Ridge Observatory" />
+                </div>
             </div>
         </div>
         <br />
@@ -663,7 +714,10 @@
                     <div class="col-10 timeline-courses">
                         <b>MATH 126</b>: Calculus with Analytic Geometry III<br />
                         <b>CSE 142</b>: Computer Programming I<br />
-                        <b>ENGL 131</b>: Composition: Exposition<br />
+                        <div>
+                            <b>ENGL 131</b>: Composition: Exposition
+                            <img class="invert classIcon" src="Icons/scroll.png" alt="Scroll Icon" title="Cool Portfolio!" />
+                        </div>
                         <b>EE 491</b>: Undergraduate Seminar<br />
                         <b>ENGR 297</b>: Urban Infrastructure Lab<br />
                     </div>
@@ -671,7 +725,14 @@
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <div id="Basketball Statistics Tracking ID" class="link" onclick="toggleLeft(this);">Basketball Statistics Tracking</div>
+                <a href="https://github.com/AlexEidt" target="_blank">
+                    Joined GitHub!
+                    <img class="invert classIcon invertedLink" src="Icons/github.png" alt="GitHub Icon" title="GitHub" />
+                </a>
+                <div id="Basketball Statistics Tracking ID" class="link" onclick="toggleLeft('Basketball Statistics Tracking');">
+                    Basketball Statistics Tracking
+                    <img class="invert classIcon" src="Icons/java.png" alt="Java Icon" title="Built with Java" />
+                </div>
             </div>
         </div>
         <br />
@@ -687,7 +748,10 @@
                     <div class="col-10 timeline-courses">
                         <b>MATH 125</b>: Calculus with Analytic Geometry II<br />
                         <b>CHEM 142</b>: General Chemistry<br />
-                        <b>ART H 201</b>: Survey of Western Ancient Art<br />
+                        <div>
+                            <b>ART H 201</b>: Western Ancient Art
+                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
+                        </div>
                         <b>ENGR 101</b>: Engineering Exploration<br />
                         <b>GEN ST 199</b>: The University Community<br />
                     </div>
@@ -695,9 +759,10 @@
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
                     </div>
                 </div>
-                <b>
+                <div>
                     UW Solar
-                </b>
+                    <img class="invert classIcon" src="Icons/uwsolar.png" alt="UW Solar Icon" title="UW Solar" />
+                </div>
             </div>
         </div>
         <br />
@@ -720,5 +785,3 @@
         <h3 class="left-h3">Verilog</h3>
     </div>
 </div>
-
-</html>

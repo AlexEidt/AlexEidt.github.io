@@ -48,15 +48,16 @@ function toggleLeft(self, id) {
         document.getElementById('storage').innerHTML = left.innerHTML;
     }
     const leftHeader = left.getElementsByClassName('left-header');
-    if (leftHeader.length > 0 && leftHeader[0].innerHTML.includes(self.innerHTML || self)) {
+    if (leftHeader.length > 0 && leftHeader[0].innerHTML.includes(self.innerText || self)) {
         left.innerHTML = document.getElementById('storage').innerHTML;
-        left.style.width = '40%';
-        document.getElementsByClassName('right')[0].style.width = '60%';
+        left.style = '';
+        document.getElementsByClassName('right')[0].style = '';
     } else {
-        left.innerHTML = document.getElementById(self.innerHTML || self).innerHTML;
+        left.innerHTML = document.getElementById(self.innerText || self).innerHTML;
         left.style.width = '55%';
         document.getElementsByClassName('right')[0].style.width = '45%';
     }
+    // If returning to timeline, auto scroll to location on timeline.
     if (self === 'Timeline') {
         document.getElementById(`${id} ID`).scrollIntoView({
             block: 'center'
