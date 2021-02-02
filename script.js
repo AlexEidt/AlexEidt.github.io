@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    // Add year to copyright
+    document.getElementById('copyright').innerHTML += ` ${new Date().getFullYear()}`;
+});
+
 // Toggle Main Image when clicked.
 function toggle(self) {
     if (document.getElementsByClassName('left')[0].innerHTML.includes('mainFrame')) {
