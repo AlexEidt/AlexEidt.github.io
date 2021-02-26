@@ -448,7 +448,9 @@
 <div id="UW Course Planner" class="hidden">
     <div class="left-content centered">
         <h2 class="left-header">
-            UW Course Planner
+            <a href="https://alexeidt.pythonanywhere.com/" target="_blank">
+                UW Course Planner
+            </a>
         </h2>
         <span class="calendar centered">
             <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'UW Course Planner');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
@@ -474,20 +476,35 @@
         <p>
             The UW Course Planner is basically a course management/lookup tool for all three UW Campuses.
             It features prerequisite trees for every course that recursively outline all prerequisites
-            for any given course.
+            for any given course. As a bonus, these graphics are clickable as well! Clicking on any course in
+            the graph will bring you to its page. These images are static, but visit the site to see that in action!
         </p>
-        <img class="img-left centered" src="Projects/UWCoursePlanner/EE233.png" alt="Course Prerequisite Tree" />
+        <a href="https://alexeidt.pythonanywhere.com/EE233/" target="_blank">
+            <img class="img-left centered" src="Projects/UWCoursePlanner/EE233.svg" alt="Course Prerequisite Tree" />
+        </a>
+        <br />
+        <p>
+            In addition to this, the connections of all courses in a given department are shown by their prerequisite
+            connections to one another. This helps to give an overview of the department.
+        </p>
+        <a href="https://alexeidt.pythonanywhere.com/EE/" target="_blank">
+            <img class="img-left centered" src="Projects/UWCoursePlanner/EE.svg" alt="Course Prerequisite Tree" />
+        </a>
         <br />
         <p>
             It also features schedule visualization on a campus map so that students can see where their
             courses are located on campus.
         </p>
-        <img class="img-left centered" src="Projects/UWCoursePlanner/Map.PNG" alt="Schedule Visualization on Campus Map" />
+        <a href="https://alexeidt.pythonanywhere.com/geocode/" target="_blank">
+            <img class="img-left centered" src="Projects/UWCoursePlanner/Map.PNG" alt="Schedule Visualization on Campus Map" />
+        </a>
         <br />
         <p>
             Additionally, it features a keyword search for course descriptions.
         </p>
-        <img class="img-left centered" src="Projects/UWCoursePlanner/KeywordSearch.PNG" alt="Course Keyword Search" />
+        <a href="https://alexeidt.pythonanywhere.com/keyword/" target="_blank">
+            <img class="img-left centered" src="Projects/UWCoursePlanner/KeywordSearch.PNG" alt="Course Keyword Search" />
+        </a>
         <br />
         <p>
             In order to get all the data to display on this website, I built a library called
