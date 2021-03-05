@@ -7,6 +7,7 @@ $(document).ready(function() {
 function toggleDarkMode() {
     const stylesheet = document.getElementById('stylesheet');
     const mainImage = document.getElementsByClassName('mainFrame')[0];
+    const storageImage = document.getElementById('storage').getElementsByClassName('mainFrame')[0];
     const h1 = document.getElementById('mainHeader');
     h1.style.visibility = 'visible';
     h1.style['padding-top'] = '30vh';
@@ -15,10 +16,14 @@ function toggleDarkMode() {
         stylesheet.href = 'dark-theme.css';
         mainImage.src = 'Icons/moon.gif';
         mainImage.style.width = '50%';
+        storageImage.src = 'Icons/moon.gif';
+        storageImage.style.width = '50%';
     } else {
         stylesheet.href = 'style.css';
         mainImage.src = 'Icons/mainIcon.png';
         mainImage.style.width = '75%';
+        storageImage.src = 'Icons/mainIcon.png';
+        storageImage.style.width = '75%';
     }
 }
 
