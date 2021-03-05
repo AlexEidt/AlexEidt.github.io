@@ -12,14 +12,14 @@
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" id="stylesheet" type="text/css" href="style.css">
 
     <link rel="icon" type="image/png" href="Icons/favicon.png"/>
     <script src="script.js"></script>
 </head>
 <body>
     <div class="container left">
-        <h1 id="mainHeader">Alex Eidt</h1><br />
+        <h1 id="mainHeader" class="left-main">Alex Eidt</h1><br />
         <img id="main" class="mainFrame centered invert link fadeIn" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
     </div>
     <div class="container right">
@@ -28,6 +28,7 @@
             <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
             <hr />
         </div>
+        <img id="dark-mode" class="largeIcon link blurOnHover" src="Icons/darkmode.png" title="Dark Mode" alt="Dark Mode Toggle" onclick="toggleDarkMode();" />
         <h2>About</h2>
         <p>
             I'm an undergraduate student studying <a href="https://www.ece.uw.edu/" target="_blank">Electrical Engineering</a>

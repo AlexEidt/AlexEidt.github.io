@@ -3,6 +3,25 @@ $(document).ready(function() {
     document.getElementById('copyright').innerHTML += ` ${new Date().getFullYear()}`;
 });
 
+// Toggle Dark Mode when the Moon Icon is clicked.
+function toggleDarkMode() {
+    const stylesheet = document.getElementById('stylesheet');
+    const mainImage = document.getElementsByClassName('mainFrame')[0];
+    const h1 = document.getElementById('mainHeader');
+    h1.style.visibility = 'visible';
+    h1.style['padding-top'] = '30vh';
+
+    if (stylesheet.getAttribute('href') === 'style.css') {
+        stylesheet.href = 'dark-theme.css';
+        mainImage.src = 'Icons/moon.gif';
+        mainImage.style.width = '50%';
+    } else {
+        stylesheet.href = 'style.css';
+        mainImage.src = 'Icons/mainIcon.png';
+        mainImage.style.width = '75%';
+    }
+}
+
 // Toggle Main Image when clicked.
 function toggle(self) {
     if (document.getElementsByClassName('left')[0].innerHTML.includes('mainFrame')) {
@@ -11,6 +30,7 @@ function toggle(self) {
         const src = String(self.src).split('Icons/').pop();
     
         switch (src) {
+            case 'moon.gif':
             case 'mainIcon.png':
                 mainImage.style.width = '75%';
                 h1.style['padding-top'] = '10vh';
@@ -25,10 +45,15 @@ function toggle(self) {
                 break;
             case 'alexeidt.gif':
             case 'pythons.gif':
-                mainImage.style.width = "85%";
                 h1.style.visibility = 'visible';
                 h1.style['padding-top'] = '30vh';
-                mainImage.src = 'Icons/mainIcon.png';
+                if (document.getElementById('stylesheet').getAttribute('href') === 'style.css') {
+                    mainImage.src = 'Icons/mainIcon.png';
+                    mainImage.style.width = "85%";
+                } else {
+                    mainImage.src = 'Icons/moon.gif';
+                    mainImage.style.width = '50%';
+                }
                 break;
         }
     }

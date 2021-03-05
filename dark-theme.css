@@ -5,9 +5,9 @@ html {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
+    color: whitesmoke;
     font-size: 1.2rem;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.85);
     margin: 0;
     transition: 0.7s;
 }
@@ -70,8 +70,7 @@ body {
     /*background-color: #c9cf86;*/
     /*background-color: #766d7a;*/
     /*background-color: #f59642;*/
-    background-color: #5896ec;
-    color: whitesmoke;
+    /*background-color: #5896ec; ORIGINAL*/
     overflow-y: scroll;
     display: block;
     transition: '';
@@ -82,7 +81,6 @@ body {
     right: 0;
     width: 100%;
     padding: 2em;
-    background-color: whitesmoke;
     overflow-y: scroll;
     z-index: 1;
     transition: '';
@@ -96,7 +94,6 @@ body {
 h1 {
     text-align: center;
     font-weight: bolder;
-    color: black;
     padding-top: 5vh;
     padding-bottom: 1vh;
     font-size: 3.5rem;
@@ -112,7 +109,7 @@ h3 {
 }
 
 hr {
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
 }
 
 p {
@@ -123,6 +120,8 @@ p {
 img.largeIcon {
     width: 4rem;
     padding: 0.5rem;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
  
 /* Main Icon featured on page. */
@@ -130,6 +129,8 @@ img.mainFrame {
     width: 50%;
     padding-bottom: 10vh;
     transition: 0.6s;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 a:link, a:active, a:hover, a:visited {
@@ -145,8 +146,8 @@ a:hover {
 /* Image links get hover effect. */
 a img:hover, .blurOnHover:hover {
     transition: 0.4s;
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
+    -webkit-filter: blur(1px) invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
+    filter: blur(1px) invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
     cursor: pointer;
 }
 
@@ -185,17 +186,23 @@ img.projectIcon {
     width: 3rem;
     max-height: 2rem;
     padding-left: 1rem;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 /* Icons used in "Coursework" section. */
 img.classIcon {
     width: 2.5rem;
     padding-left: 0.2rem;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 /* Icons used within paragraphs. */
 img.iconInline {
     width: 1.5rem;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 /* For images that should be inverted. */
@@ -235,6 +242,11 @@ img.iconInline {
     border-bottom: 0.15em solid whitesmoke;
     padding: 0.2em;
     width: 60%;
+}
+
+/* Main Header on the left side of the screen during fullscreen */
+.left-main {
+    font-size: 0px;
 }
 
 /* Headers containing the Quarter labels in Coursework. */
@@ -319,9 +331,11 @@ h3.left-h3 {
         width: 40%;
         transition: width 2s;
     }
+    .left-main {
+        font-size: 3.5rem;
+    }
     .right {
         width: 60%;
-        background: whitesmoke;
         transition: width 2s;
     }
     h1 {
