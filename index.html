@@ -122,6 +122,20 @@
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
+            <h3 class="link" onclick="toggleLeft(this);">Side-Scroller</h3>
+            <div>
+                <!--
+                <a href="https://github.com/AlexEidt/Frogger" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>-->
+                <img class="projectIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
+            </div>
+        </div>
+        <p>
+            For my <a href="https://alexeidt.pythonanywhere.com/EE371/" target="_blank">EE 371</a> final project,
+            my partner and I implemented a side-scroller game on a FPGA on an Altera DE1 SoC board.
+        </p>
+        <div class="projectHeader">
             <h3 class="link" onclick="toggleLeft(this);">Game of Life Simulator</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Game-of-Life-Simulator" target="_blank">
@@ -159,7 +173,7 @@
             Creates acyclyic directed graphs of any directory of your choosing!
         </p>
         <div class="projectHeader">
-            <h3>UIL/UW Solar Websites</h3>
+            <h3 class="link" onclick="toggleLeft(this);">UIL/UW Solar Websites</h3>
             <div>
                 <a href="https://github.com/UW-Solar/Website" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -203,8 +217,8 @@
         </div>
         <p>
             Frogger is an old classic where the player needs to avoid oncoming traffic to safely cross the road.
-            I chose to implement this game in an FPGA on an Altera DE1 SoC Board for my EE 271 (Digital Circuits and Systems)
-            final project.
+            I chose to implement this game on a FPGA on an Altera DE1 SoC Board for my
+            <a href="https://alexeidt.pythonanywhere.com/EE271/" target="_blank">EE 271</a> final project.
         </p>
         <div class="projectHeader">
             <h3 class="link" onclick="toggleLeft(this);">UW Course Planner</h3>
@@ -331,6 +345,40 @@
         <br /><br />
     </div>
 </div>
+<div id="Side-Scroller" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            Side-Scroller
+        </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Side-Scroller');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
+            Mar 2021
+        </span>
+        <p>
+            For my final project in <a href="https://alexeidt.pythonanywhere.com/EE371/" target="_blank">EE 371: Design of Digital Circuits and Systems</a>, my partner and I chose to implement a
+            Side-Scroller Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
+        </p>
+        <p>
+            The game consists of the player which must avoid the enemies (diamonds) coming towards them
+            from right to left across the screen. The player can move up and down by pressing the
+            left and right mouse buttons. Every time the player survives a "wave" of enemies, their score
+            gets incremented, which is displayed as hex numbers on three of the DE1's seven-segment displays.
+            Every time the user survives a wave, a note is played via speakers to signal this. If the user
+            is to collide with an enemy, their score will reset to zero and that same note will be played, just
+            three times as long.
+        </p>
+        <video class="centered img-left" width="90%" controls muted>
+            <source src="Projects/Side-Scroller/Side-Scroller.mp4" type="video/mp4">
+            No HTML video support in this browser
+        </video>
+        <br />
+        <p>
+            This project was made using <b>SystemVerilog</b>
+            <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />
+        </p>
+        <br />
+    </div>
+</div>
 <div id="Game of Life Simulator" class="hidden">
     <div class="left-content centered">
         <h2 class="left-header">
@@ -352,7 +400,10 @@
             The user can save the current state of the board to reload later as well as capture the current state
             as a transparent PNG or record the simulation as a transparent GIF.
         </p>
-        <img class="img-left centered" src="Projects/GameofLife/app.gif" alt="Game of Life App" />
+        <video class="centered img-left" width="90%" controls muted>
+            <source src="Projects/GameofLife/app.mp4" type="video/mp4">
+            No HTML video support in this browser
+        </video>
         <br />
         <p>
             The app is built in <b>Kotlin</b> 
@@ -387,11 +438,73 @@
             as well as limiting the depth of the visualization to prevent the graph from becoming
             too cluttered.
         </p>
-        <img class="img-left centered" src="Projects/DirectoryGrapher/Demo_Graph_TB.png" alt="Directory Grapher Project" />
+        <p>
+            Click the image below to cycle through the carousel!
+        </p>
+        <img
+            class="img-carousel centered link"
+            id="DirectoryGrapher-Slideshow"
+            src="Projects/DirectoryGrapher/Demo_Graph_TB.png"
+            alt="Directory Grapher Demo Image"
+            onclick="createCarousel(
+                'DirectoryGrapher',
+                [
+                    'Demo_Graph_TB.png', 'Demo_Graph_BT.png', 'Demo_Graph_LR.png',
+                    'Demo_Graph_RL.png', 'Demo_Graph_None.png', 'Demo_Graph_1.png',
+                    'Demo_Graph_2.png', 'Demo_Graph_3.png', 'Demo_Graph_Data.png', 
+                    'Demo_Graph_Data_Files.png' 
+                ]
+            );"    
+        />
+        <br />
+        <div
+            id="DirectoryGrapher-Marker"
+            style="width: 10%; border-radius: 1.5rem; border-bottom: 2rem solid whitesmoke; transition: 0.4s;"
+            class="centered"
+        ></div>
         <br />
         <p>
             The script is written in <b>Python</b> <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
             and uses the <a href="https://graphviz.org/" target="_blank">GraphViz</a> library for the visualization.    
+        </p>
+        <br />
+    </div>
+</div>
+<div id="UIL/UW Solar Websites" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            UIL/UW Solar Websites
+        </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'UIL/UW Solar Websites');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
+            Jun 2020 - Sept 2020
+        </span>
+        <p>
+            These were my final projects while at UW Solar, a Registered Student Organization part of the
+            Urban Infrastructure Lab at the University of Washington. The club participates in planning and
+            design of sustainable energy technologies around campus while also advising off-campus organizations
+            on sustainable design.
+        </p>
+        <a href="http://uwsolar.be.uw.edu/" target="_blank">
+            <h3 class="text-center">UW Solar Website</h3>
+        </a>
+        <br />
+        <object class="img-left centered" style="height: 75vh; width: 80%;" data="http://uwsolar.be.uw.edu/"></object>
+        <br />
+        <a href="https://uil.be.uw.edu/" target="_blank">
+            <h3 class="text-center">Urban Infrastructure Lab<br />(UIL) Website</h3>
+        </a>
+        <br />
+        <object class="img-left centered" style="height: 75vh; width: 80%;" data="https://uil.be.uw.edu/"></object>
+        <br />
+        <p>
+            The UW Solar Website was made using <a href="https://vuejs.org/" target="_blank">Vue JS</a>
+            <img class="iconInline invert" src="Icons/vuejs.png" alt="Vue JS Icon" />
+            and <b>JavaScript</b>.
+        </p>
+        <p>
+            The UIL Website was made using <a href="https://wordpress.com/" target="_blank">WordPress</a>
+            <img class="iconInline invert" src="Icons/wordpress.png" alt="WordPress Icon" />
         </p>
         <br />
     </div>
@@ -411,7 +524,10 @@
             to customize their experience. The user can also choose to leave out the starting words and
             let the program randomly choose words from a large dictionary file.
         </p>
-        <img class="img-left centered" src="Projects/WordSearch/wordsearch.gif" alt="Word Search Program" />
+        <video class="centered img-left" width="90%" controls muted>
+            <source src="Projects/WordSearch/WordSearchUI.mp4" type="video/mp4">
+            No HTML video support in this browser
+        </video>
         <br />
         <p>
             This application was made using <b>Python</b>
@@ -432,16 +548,19 @@
             Feb 2020 - Mar 2020
         </span>
         <p>
-            For my final project in <b>EE 271: Digital Circuits and Systems</b>, I chose to implement the
+            For my final project in <a href="https://alexeidt.pythonanywhere.com/EE271/" target="_blank">EE 271: Digital Circuits and Systems</a>, I chose to implement the
             Frogger Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
         </p>
         <img class="img-left centered" src="Projects/Frogger/DE1_SoC_Board.JPG" alt="Altera DE1 SOC Board" />
         <br />
-        <img class="img-left centered" src="Projects/Frogger/Frogger_Demo.gif" alt="Frogger Project Demo" />
+        <video class="centered img-left" width="90%" controls muted>
+            <source src="Projects/Frogger/Frogger_Demo.mp4" type="video/mp4">
+            No HTML video support in this browser
+        </video>
         <br />
         <p>
             This project was made using <b>SystemVerilog</b>
-            <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />.
+            <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />
         </p>
         <br />
     </div>
@@ -466,6 +585,9 @@
             go back to the drawing board and rebuild the project from the ground up. After putting most of my summer
             break into it, I finally completed the project and had built a foundation in Python.
         </p>
+        <br />
+        <object class="img-left centered" style="height: 75vh; width: 80%;" data="https://alexeidt.pythonanywhere.com/"></object>
+        <br />
         <p>
             After successful completion of the project, I reached out to UW IT to let them know about it.
             I presented the project to the <a href="https://www.washington.edu/uwit/divisions/as/aca/" target="_blank">
@@ -478,19 +600,15 @@
             The UW Course Planner is basically a course management/lookup tool for all three UW Campuses.
             It features prerequisite trees for every course that recursively outline all prerequisites
             for any given course. As a bonus, these graphics are clickable as well! Clicking on any course in
-            the graph will bring you to its page. These images are static, but visit the site to see that in action!
+            the graph will bring you to its page!
         </p>
-        <a href="https://alexeidt.pythonanywhere.com/EE233/" target="_blank">
-            <img class="img-left centered" src="Projects/UWCoursePlanner/EE233.svg" alt="Course Prerequisite Tree" />
-        </a>
+        <object class="img-left centered" data="Projects/UWCoursePlanner/EE233.svg"></object>
         <br />
         <p>
             In addition to this, the connections of all courses in a given department are shown by their prerequisite
             connections to one another. This helps to give an overview of the department.
         </p>
-        <a href="https://alexeidt.pythonanywhere.com/EE/" target="_blank">
-            <img class="img-left centered" src="Projects/UWCoursePlanner/EE.svg" alt="Course Prerequisite Tree" />
-        </a>
+        <object class="img-left centered" data="Projects/UWCoursePlanner/EE.svg"></object>
         <br />
         <p>
             It also features schedule visualization on a campus map so that students can see where their
@@ -543,10 +661,32 @@
             basic Java/Programming knowledge I got from the introductory CS courses at UW, I spent around 8 months
             creating this app.
         </p>
-        <img class="img-left centered" src="Projects/BasketballStatisticsTracking/basketballdoc.gif" alt="Basketball Statistics Tracking Documentation GIF" />
+        <p>
+            Click the image below to cycle through the carousel!
+        </p>
+        <img
+            class="img-carousel centered link"
+            id="BasketballStatisticsTracking-Slideshow"
+            src="Projects/BasketballStatisticsTracking/GetPlayersPanelwPlayers.png"
+            alt="Basketball Statistics Tracking Demo Image"
+            onclick="createCarousel(
+                'BasketballStatisticsTracking',
+                [
+                    'GetPlayersPanelwPlayers.png', 'StartersPanelwPlayers.png', 'SettingsWindow.png',
+                    'ManagementPanelNoBench.png', 'ManagementPanelwBench.png', 'PlayerSubstitution.png',
+                    'AddStatPanel.png', 'BoxScoreTable.png', 'UndoButton.png'
+                ]
+            );"    
+        />
+        <br />
+        <div
+            id="BasketballStatisticsTracking-Marker"
+            style="width: 10%; border-radius: 1.5rem; border-bottom: 2rem solid whitesmoke; transition: 0.4s;"
+            class="centered"
+        ></div>
         <br />
         <p>
-            This project is made in <b>Java</b> <img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
+            This project is made in <b>Java</b><img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
             and the UI is made with <b>Java Swing</b>.
         </p>
         <br />
@@ -606,10 +746,12 @@
                     <img class="invert classIcon" src="Icons/uwsolar.png" alt="UW Solar Icon" title="Built with UW Solar" />
                 </div>
                 <div>
-                    UW Solar/UIL Websites
-                    <img class="invert classIcon" src="Icons/vuejs.png" alt="VueJS Icon" title="Built with VueJS" />
-                    <img class="invert classIcon" src="Icons/javascript.png" alt="Javascript Icon" title="Built with Javascript" />
-                    <img class="invert classIcon" src="Icons/wordpress.png" alt="WordPress Icon" title="Built with WordPress" />
+                    <div id="UIL/UW Solar Websites ID" class="link" onclick="toggleLeft('UIL/UW Solar Websites');">
+                        UIL/UW Solar Websites
+                        <img class="invert classIcon" src="Icons/vuejs.png" alt="VueJS Icon" title="Built with VueJS" />
+                        <img class="invert classIcon" src="Icons/javascript.png" alt="Javascript Icon" title="Built with Javascript" />
+                        <img class="invert classIcon" src="Icons/wordpress.png" alt="WordPress Icon" title="Built with WordPress" />
+                    </div>
                 </div>
                 <div id="Word Search Generator ID" class="link" onclick="toggleLeft('Word Search Generator');">
                     Word Search Generator

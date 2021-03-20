@@ -3,6 +3,23 @@ $(document).ready(function() {
     document.getElementById('copyright').innerHTML += ` ${new Date().getFullYear()}`;
 });
 
+// Create Image carousels given a list of file names.
+function createCarousel(projectName, files) {
+    const carouselID = `${projectName}-Slideshow`;
+    const markerID = `${projectName}-Marker`;
+    const src = document.getElementById(carouselID).src;
+    let idx = files.indexOf(String(src).split('/').pop());
+    idx = idx == files.length - 1 ? 0 : idx + 1;
+    document.getElementById(carouselID).src = `Projects/${projectName}/${files[idx]}`;
+    if (idx == 0) {
+        document.getElementById(markerID).style.width = `${Math.floor(100 / files.length)}%`;
+    } else {
+        let width = document.getElementById(markerID).style.width;
+        width = parseInt(width.slice(0, -1));
+        document.getElementById(markerID).style.width = `${width + Math.floor(100 / files.length)}%`;
+    }
+}
+
 // Toggle Dark Mode when the Moon Icon is clicked.
 function toggleDarkMode() {
     const stylesheet = document.getElementById('stylesheet');

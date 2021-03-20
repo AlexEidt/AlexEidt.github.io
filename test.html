@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alex Eidt</title>
+    <style>
+        #line {
+            width: 50%;
+            border-bottom: 10px solid black;
+        }
+        #chart {
+            width: 0;
+            height: 0;
+            border-right: 60px solid purple;
+            border-top: 60px solid transparent;
+            border-left: 60px solid transparent;
+            border-bottom: 60px solid transparent;
+            border-radius: 30px;
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<div id="chart"></div>
+<br /><br /><br /><br /><br /><br />
+<button onclick="createCarousel('BasketballStatisticsTracking', ['AddStatPanel.png', 'BoxScoreTable.png', 'GetPlayersPanelwPlayers.png', 'ManagementPanelNoBench.png', 'ManagementPanelwBench.png', 'PlayerSubstitution.png', 'SettingsWindow.png', 'StartersPanelwPlayers.png', 'UndoButton.png'], 'i', 'line');">Click Here</button>
+<div id="line" style="border-bottom: 20px solid black; transition: 0.4s"></div>
+<br /><br />
+<img id="i" style="width:50%;" src="Projects/BasketballStatisticsTracking/AddStatPanel.png" onclick="createCarousel('BasketballStatisticsTracking', ['AddStatPanel.png', 'BoxScoreTable.png', 'GetPlayersPanelwPlayers.png', 'ManagementPanelNoBench.png', 'ManagementPanelwBench.png', 'PlayerSubstitution.png', 'SettingsWindow.png', 'StartersPanelwPlayers.png', 'UndoButton.png'], 'i', 'line');"/>
+</html>

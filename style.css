@@ -212,6 +212,11 @@ img.iconInline {
     margin-right: auto;
 }
 
+/* For elements whose text should be centered. */
+.text-center {
+    text-align: center;
+}
+
 /* Calendar time range header for Projects. */
 .calendar {
     text-align: center;
@@ -253,6 +258,14 @@ h3.left-h3 {
 /* Images on left container that occupy the entire width. */
 .img-left {
     width: 85%;
+    background: whitesmoke;
+    border: 5px solid whitesmoke;
+}
+
+/* Carousel Images*/
+.img-carousel {
+    height: 40vh;
+    max-width: 85%;
     background: whitesmoke;
     border: 5px solid whitesmoke;
 }
