@@ -264,8 +264,7 @@ h3.left-h3 {
 
 /* Carousel Images*/
 .img-carousel {
-    height: 40vh;
-    max-width: 100%;
+    width: 90%;
     background: whitesmoke;
     border: 5px solid whitesmoke;
 }
