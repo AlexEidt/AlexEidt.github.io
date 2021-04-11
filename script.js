@@ -11,7 +11,6 @@ function createCarousel(projectName, files, ID) {
     let idx = files.indexOf(String(src).split('/').pop());
     idx = idx == files.length - 1 ? 0 : idx + 1;
     document.getElementById(carouselID).src = `Projects/${projectName}/${files[idx]}`;
-    console.log(idx);
     if (idx == 0) {
         document.getElementById(markerID).style.width = `${Math.floor(100 / files.length)}%`;
     } else {
