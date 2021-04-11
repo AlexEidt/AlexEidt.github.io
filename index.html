@@ -139,16 +139,16 @@
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
-            <h3>Bubblio</h3>
+            <h3 class="link" onclick="toggleLeft(this);">Bubblio</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Bubblio" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <img class="projectIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
+                <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
             </div>
         </div>
         <p>
-            Creates animated scatterplot-style letters and words in different shapes, sizes and densities.
+            Creates animated scatterplot-style letters and words in different shapes and sizes.
         </p>
         <div class="projectHeader">
             <h3 class="link" onclick="toggleLeft(this);">Side-Scroller</h3>
@@ -157,7 +157,7 @@
                 <a href="https://github.com/AlexEidt/Frogger" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>-->
-                <img class="projectIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
+                <img class="largeIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
             </div>
         </div>
         <p>
@@ -241,7 +241,7 @@
                 <a href="https://github.com/AlexEidt/Frogger" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>-->
-                <img class="projectIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
+                <img class="largeIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
             </div>
         </div>
         <p>
@@ -376,6 +376,31 @@
         <b>EE 341</b>: Discrete Time Linear Systems<br />
         <b>EE 371</b>: Design of Digital Circuits and Systems<br />
         <br /><br />
+    </div>
+</div>
+<div id="Bubblio" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            Bubblio
+        </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Bubblio');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
+            Apr 2021
+        </span>
+        <p>
+            Bubblio is a script that creates scatterplot-style letters and words in various fonts, colors, shapes,
+            densities and orienations. It's built around font bitmaps which are used to create bubbly letters.
+        </p>
+        <p>
+            Bubblio also offers animated letters and words in GIF format, as shown below.
+        </p>
+        <img class="centered" width="75%" src="Projects/Bubblio/bubblio.gif" />
+        <br />
+        <p>
+            This project was made using <b>Go</b>
+            <img class="iconInline invert" src="Icons/golang.png" alt="Go Language Icon" />
+        </p>
+        <br />
     </div>
 </div>
 <div id="Side-Scroller" class="hidden">

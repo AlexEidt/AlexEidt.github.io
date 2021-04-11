@@ -4,13 +4,14 @@ $(document).ready(function() {
 });
 
 // Create Image carousels given a list of file names.
-function createCarousel(projectName, files) {
-    const carouselID = `${projectName}-Slideshow`;
-    const markerID = `${projectName}-Marker`;
+function createCarousel(projectName, files, ID) {
+    const carouselID = `${ID ? ID : projectName}-Slideshow`;
+    const markerID = `${ID ? ID : projectName}-Marker`;
     const src = document.getElementById(carouselID).src;
     let idx = files.indexOf(String(src).split('/').pop());
     idx = idx == files.length - 1 ? 0 : idx + 1;
     document.getElementById(carouselID).src = `Projects/${projectName}/${files[idx]}`;
+    console.log(idx);
     if (idx == 0) {
         document.getElementById(markerID).style.width = `${Math.floor(100 / files.length)}%`;
     } else {
