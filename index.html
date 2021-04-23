@@ -139,6 +139,24 @@
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
+            <h3 class="link" onclick="toggleLeft(this);">ASCII Vision</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/ASCII-Vision" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="projectIcon" src="Icons/C.png" title="Built with C" alt="C Programming Language Logo" />
+                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
+            </div>
+        </div>
+        <p>
+            Convert video/webcam streams into high resolution ASCII streams with other optional video effects.
+            I also created a Tutorial on processing webcam streams with C and displaying them on a window.
+            Find it on <a href="https://github.com/AlexEidt/Webcam-Processing-Tutorial" target="_blank">GitHub!</a>
+            <a href="https://github.com/AlexEidt/Webcam-Processing-Tutorial" target="_blank">
+                <img class="iconInline" src="Icons/github.png" title="Check out uwtools on GitHub!" alt="GitHub Icon" />
+            </a>
+        </p>
+        <div class="projectHeader">
             <h3 class="link" onclick="toggleLeft(this);">Bubblio</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Bubblio" target="_blank">
@@ -376,6 +394,34 @@
         <b>EE 341</b>: Discrete Time Linear Systems<br />
         <b>EE 371</b>: Design of Digital Circuits and Systems<br />
         <br /><br />
+    </div>
+</div>
+<div id="ASCII Vision" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            ASCII Vision
+        </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'ASCII Vision');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
+            Apr 2021
+        </span>
+        <p>
+            ASCII Vision is a program that uses Python to read in video from a file or a webcam frame by frame,
+            process every frame in C for speed, and then display the filtered frames on a window for the user
+            to see. The shining light of this project is the ASCII filter, however it can be used together with
+            several other filters implemented via convolution.
+        </p>
+        <img class="centered img-left" src="Projects/ASCIIVision/fireworks-original.gif" alt="Fireworks Video" />
+        <br /><br /><br />
+        <img class="centered img-left" src="Projects/ASCIIVision/fireworks.gif" alt="Fireworks Video with ASCII Filter" />
+        <br /><br /><br />
+        <p>
+            This project was made using <b>C</b>
+            <img class="iconInline invert" src="Icons/C.png" alt="C Language Icon" />
+            and <b>Python</b>
+            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+        </p>
+        <br />
     </div>
 </div>
 <div id="Bubblio" class="hidden">
