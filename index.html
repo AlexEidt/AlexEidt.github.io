@@ -139,6 +139,19 @@
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
+            <h3 class="link" onclick="toggleLeft(this);">Mosaiic</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/Mosaiic" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
+                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
+            </div>
+        </div>
+        <p>
+            Creates animated image mosaics with colored ASCII.
+        </p>
+        <div class="projectHeader">
             <h3 class="link" onclick="toggleLeft(this);">ASCII Vision</h3>
             <div>
                 <a href="https://github.com/AlexEidt/ASCII-Vision" target="_blank">
@@ -394,6 +407,33 @@
         <b>EE 341</b>: Discrete Time Linear Systems<br />
         <b>EE 371</b>: Design of Digital Circuits and Systems<br />
         <br /><br />
+    </div>
+</div>
+<div id="Mosaiic" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            Mosaiic
+        </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Mosaiic');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
+            May 2021
+        </span>
+        <p>
+            Mosaiic is a script that creates animated image mosaics. There are several options available, the user
+            can choose to make the mosaic colored, grayscaled or monochrome, and choose to render the image as colored
+            or in ASCII with different font sizes.
+        </p>
+        <img class="centered img-left" width="75%" src="Projects/Mosaiic/balloon.gif" />
+        <br />
+        <img class="centered img-left" width="75%" src="Projects/Mosaiic/balloon-ascii-color-font-13.gif" />
+        <br />
+        <p>
+            This project was made using <b>Go</b>
+            <img class="iconInline invert" src="Icons/golang.png" alt="Go Language Icon" />
+            and <b>Python</b>
+            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+        </p>
+        <br />
     </div>
 </div>
 <div id="ASCII Vision" class="hidden">
