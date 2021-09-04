@@ -153,6 +153,18 @@
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
+            <h3 class="link" onclick="toggleLeft(this);">Karve</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/Karve" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="projectIcon" src="Icons/java.png" title="Built with Java" alt="Java Logo" />
+            </div>
+        </div>
+        <p>
+            Implemented the Seam Carving Algorithm to resize images vertically and horizontally.
+        </p>
+        <div class="projectHeader">
             <h3 class="link" onclick="toggleLeft(this);">ASCII Video</h3>
             <div>
                 <a href="https://github.com/AlexEidt/ASCII-Video" target="_blank">
@@ -453,6 +465,31 @@
         <b>EE 331</b>: Devices and Circuits I<br />
         <b>EE 474</b>: Introduction to Embedded Computing Systems<br />
         <br /><br />
+    </div>
+</div>
+<div id="Karve" class="hidden">
+    <div class="left-content centered">
+        <h2 class="left-header">
+            Karve
+        </h2>
+        <span class="calendar centered">
+            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Karve');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
+            Sept 2021
+        </span>
+        <p>
+            Karve is an affectionately named Seam Carver that can resize images both vertically and horizontally.
+            Seam Carving implements content aware image resizing that preserves the objects in an image while
+            removing the less important background "seams" instead.
+        </p>
+        <img class="centered img-left" width="75%" src="Projects/Karve/karve.png" />
+        <br />
+        <img class="centered img-left" width="75%" src="Projects/Karve/demo2.gif" />
+        <br />
+        <p>
+            This project was made using <b>Python</b>
+            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
+        </p>
+        <br />
     </div>
 </div>
 <div id="ASCII Video" class="hidden">
