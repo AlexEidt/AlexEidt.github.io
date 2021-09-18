@@ -23,66 +23,10 @@ function createCarousel(projectName, files, ID) {
 // Toggle Dark Mode when the Moon Icon is clicked.
 function toggleDarkMode() {
     const stylesheet = document.getElementById('stylesheet');
-    const mainImage = document.getElementsByClassName('mainFrame')[0];
-    const storageImage = document.getElementById('storage').getElementsByClassName('mainFrame')[0];
-    const hasStorage = !!storageImage;
-    const h1 = document.getElementById('mainHeader');
-    h1.style.visibility = 'visible';
-    h1.style['padding-top'] = '30vh';
-
     if (stylesheet.getAttribute('href') === 'style.css') {
         stylesheet.href = 'dark-theme.css';
-        mainImage.src = 'Icons/moon.gif';
-        mainImage.style.width = '50%';
-        if (hasStorage) {
-            storageImage.src = 'Icons/moon.gif';
-            storageImage.style.width = '50%';
-        }
     } else {
         stylesheet.href = 'style.css';
-        mainImage.src = 'Icons/mainIcon.png';
-        mainImage.style.width = '75%';
-        if (hasStorage) {
-            storageImage.src = 'Icons/mainIcon.png';
-            storageImage.style.width = '75%';
-        }
-    }
-}
-
-// Toggle Main Image when clicked.
-function toggle(self) {
-    if (document.getElementsByClassName('left')[0].innerHTML.includes('mainFrame')) {
-        const h1 = document.getElementById('mainHeader');
-        const mainImage = document.getElementsByClassName('mainFrame')[0];
-        const src = String(self.src).split('Icons/').pop();
-    
-        switch (src) {
-            case 'moon.gif':
-            case 'mainIcon.png':
-                mainImage.style.width = '75%';
-                h1.style['padding-top'] = '10vh';
-                mainImage.src = 'Icons/alexeidt.gif';
-                h1.style.visibility = 'hidden';
-                break;
-            case 'python.png':
-                mainImage.style.width = '100%';
-                h1.style['padding-top'] = '0vh';
-                mainImage.src = 'Icons/pythons.gif';
-                h1.style.visibility = 'hidden';
-                break;
-            case 'alexeidt.gif':
-            case 'pythons.gif':
-                h1.style.visibility = 'visible';
-                h1.style['padding-top'] = '30vh';
-                if (document.getElementById('stylesheet').getAttribute('href') === 'style.css') {
-                    mainImage.src = 'Icons/mainIcon.png';
-                    mainImage.style.width = "85%";
-                } else {
-                    mainImage.src = 'Icons/moon.gif';
-                    mainImage.style.width = '50%';
-                }
-                break;
-        }
     }
 }
 

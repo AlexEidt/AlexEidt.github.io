@@ -19,32 +19,30 @@
 </head>
 <body>
     <div class="container left">
-        <h1 id="mainHeader" class="left-main">Alex Eidt</h1><br />
-        <img id="main" class="mainFrame centered invert link fadeIn" src="Icons/mainIcon.png" alt="Alex Eidt Icon" onclick="toggle(this);" />
+        <img id="main" class="mainFrame centered invert" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
     </div>
     <div class="container right">
         <div class="altHeader">
-            <h1>Alex Eidt</h1><br />
             <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
             <hr />
         </div>
-        <img id="dark-mode" class="largeIcon link blurOnHover" src="Icons/darkmode.png" title="Dark Mode" alt="Dark Mode Toggle" onclick="toggleDarkMode();" />
+        <img id="dark-mode" class="largeIcon link blurOnHover" src="Icons/darkmode.png" title="Dark Mode" alt="Dark Mode Toggle" onclick="toggleDarkMode();" onmouseover="this.src='Icons/breadman.png'" onmouseout="this.src='Icons/darkmode.png'" />
         <h2>About</h2>
         <p>
             I'm an undergraduate student studying <a href="https://www.ece.uw.edu/" target="_blank">Electrical Engineering</a>
-            at the <a href="http://www.washington.edu/" target="_blank">University of Washington</a>. My concentration is
-            Embedded Computing Systems with some Digital Signal Processing.
+            at the <a href="http://www.washington.edu/" target="_blank">University of Washington</a>.
+            I am interested in data visualization, signal processing, computer vision, and image processing.
         </p>
         <div class="iconStack">
             <div>
                 <a href="mailto:alex.eidt@outlook.com">
-                    <img class="largeIcon" src="Icons/email.png" title="Email" alt="Email Icon" />
+                    <img class="largeIcon" src="Icons/email.png" title="Email" alt="Email Icon" onmouseover="this.src='Icons/email-extended.png'" onmouseout="this.src='Icons/email.png'" />
                 </a>
                 <a class="removeOnMedium" href="mailto:alex.eidt@outlook.com">alex.eidt@outlook.com</a>
             </div>
             <div>
                 <a href="Resume.pdf" target="_blank">
-                    <img class="largeIcon" src="Icons/resume.png" title="Resume" alt="Resume Icon" />
+                    <img class="largeIcon" src="Icons/newspaper.png" title="Resume" alt="Resume Icon" />
                 </a>
                 <a class="removeOnMedium" href="Resume.pdf" target="_blank">Resume</a>
             </div>
@@ -55,12 +53,6 @@
                 <a class="removeOnMedium" href="https://github.com/AlexEidt" target="_blank">GitHub</a>
             </div>
             <div>
-                <a href="https://www.linkedin.com/in/alexeidt" target="_blank">
-                    <img class="largeIcon" src="Icons/linkedin.png" title="LinkedIn" alt="LinkedIn Icon" />
-                </a>
-                <a class="removeOnMedium" href="https://www.linkedin.com/in/alexeidt" target="_blank">LinkedIn</a>
-            </div>
-            <div>
                 <a href="https://www.youtube.com/channel/UCubwVFC0Vs1LnA7ZYpCWXew/featured" target="_blank">
                     <img class="largeIcon" src="Icons/youtube.png" title="YouTube" alt="YouTube Icon" />
                 </a>
@@ -68,92 +60,33 @@
             </div>
         </div>
         <br />
+        <!--
         <div class="removeOnSmall">
             <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Timeline</h2>
             <br /><br />
         </div>
+        -->
         <h2 class="link" onclick="toggleLeft(this);">Coursework</h2>
-        <p>
-            <div id="courses">
-                <ul>
-                    <li>
-                        <a href="https://cse-163.pages.cs.washington.edu/cse-163-20wi/website/index.html" target="_blank">CSE 163: Intermediate Data Programming</a>
-                        <img class="classIcon" src="Icons/python.png" title="Python" alt="Python Icon" />
-                    </li>
-                    <li>
-                        <a href="https://courses.cs.washington.edu/courses/cse351/20sp/" target="_blank">CSE 351: The Hardware Software Interface</a>
-                        <img class="classIcon" src="Icons/C.png" title="C Programming Language" alt="C Language Icon" />
-                        <img class="classIcon" src="Icons/x86.png" title="x86 Assembly" alt="x86 Assembly Language Icon" />
-                    </li>
-                    <li>
-                        <a href="https://courses.cs.washington.edu/courses/cse373/20au/" target="_blank">CSE 373: Data Structures and Algorithms</a>
-                        <img class="classIcon" src="Icons/datastructsalgs.png" title="Graph Algorithms and Data Structures" alt="Graph Icon" />
-                        <img class="classIcon" src="Icons/java.png" title="Java" alt="Java Icon" />
-                    </li>
-                    <li>
-                        <a href="https://courses.cs.washington.edu/courses/cse374/20au/" target="_blank">CSE 374: Programming Concepts and Tools</a>
-                        <img class="classIcon" src="Icons/bash.png" title="Bash Shell Scripting" alt="Bash Scripting Icon" />
-                        <img class="classIcon" src="Icons/C.png" title="C Programming Language" alt="C Language Icon" />
-                        <img class="classIcon" src="Icons/C++.png" title="C++ Programming Language" alt="C++ Icon" />
-                    </li>
-                    <li>
-                        <a href="https://courses.cs.washington.edu/courses/cse391/20sp/" target="_blank">CSE 391: System and Software Tools</a>
-                        <img class="classIcon" src="Icons/linux.png" title="Linux Operating System" alt="Linux Icon" />
-                        <img class="classIcon" src="Icons/bash.png" title="Bash Shell Scripting" alt="Bash Scripting Icon" />
-                        <img class="classIcon" src="Icons/git.png" title="Git Version Control" alt="Git Icon" />
-                    </li>
-                    <li>
-                        <a href="https://courses.cs.washington.edu/courses/cse455/21sp/" target="_blank">CSE 455: Computer Vision</a>
-                        <img class="classIcon" src="Icons/ai.png" title="Computer Vision" alt="Computer Vision Icon" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE233/" target="_blank">EE 233: Circuit Theory</a>
-                        <img class="classIcon" src="Icons/ACcircuit.png" title="AC Circuits" alt="Alternating Current Symbol" />
-                        <img class="classIcon" src="Icons/opamp.png" title="Advanced Circuit Elements and Analog Filters" alt="Operational Amplifier Symbol" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE235/" target="_blank">EE 235: Continuous Time Linear Systems</a>
-                        <img class="classIcon" src="Icons/fft.png" title="Signal Processing" alt="Fourier Transform Visualization" />
-                    </li>
-                    <li>
-                        <a href="https://class.ece.uw.edu/271/hauck2/" target="_blank">EE 271: Digital Circuits and Systems</a>
-                        <img class="classIcon" src="Icons/logicgate.png" title="Digital Logic" alt="XOR Logic Gate Symbol" />
-                        <img class="classIcon" src="Icons/verilog.png" title="System Verilog" alt="System Verilog Logo" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE331/" target="_blank">EE 331: Devices and Circuits I</a>
-                        <img class="classIcon" src="Icons/nmos.png" title="NMOSFET" alt="NMOSFET" />
-                        <img class="classIcon" src="Icons/pmos.png" title="PMOSFET" alt="PMOSFET" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE341/" target="_blank">EE 341: Discrete Time Linear Systems</a>
-                        <img class="classIcon" src="Icons/fft.png" title="Signal Processing" alt="Fourier Transform Visualization" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE371/" target="_blank">EE 371: Design of Digital Circuits and Systems</a>
-                        <img class="classIcon" src="Icons/logicgate.png" title="Digital Logic" alt="XOR Logic Gate Symbol" />
-                        <img class="classIcon" src="Icons/verilog.png" title="System Verilog" alt="System Verilog Logo" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE418/" target="_blank">EE 418: Network Security and Cryptography</a>
-                        <img class="classIcon" src="Icons/cryptography.png" title="Network Security and Cryptography" alt="Cryptography Icon" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE419/" target="_blank">EE 419: Computer Networks</a>
-                        <img class="classIcon" src="Icons/network.png" title="Computer Networks" alt="Computer Networks Icon" />
-                    </li>
-                    <li>
-                        <a href="https://alexeidt.pythonanywhere.com/EE474/" target="_blank">EE 474: Embedded Computing Systems</a>
-                        <img class="classIcon" src="Icons/C.png" title="C Programming Language" alt="C Programming Language" />
-                        <img class="classIcon" src="Icons/embedded.png" title="Embedded Computing Systems" alt="Embedded Computing Systems" />
-                    </li>
-                </ul>                
-            </div>
-        </p>
+        <br />
         <h2>Projects</h2>
         <br />
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Karve</h3>
+            <h3>Amaze</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/Amaze" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <a href="https://youtu.be/RDQ7rYMY5eg" target="_blank">
+                    <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
+                </a>
+                <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
+            </div>
+        </div>
+        <p>
+            A Maze Pattern generator using the <a href="http://mazeletter.xyz/" target="_blank">MazeLetter</a> font.
+        </p>
+        <div class="projectHeader">
+            <h3>Karve</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Karve" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -183,7 +116,7 @@
             Blazing fast ASCII Video and Image Renderer.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Mosaiic</h3>
+            <h3>Mosaiic</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Mosaiic" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -196,7 +129,7 @@
             Creates animated image mosaics with colored ASCII.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">ASCII Vision</h3>
+            <h3>ASCII Vision</h3>
             <div>
                 <a href="https://github.com/AlexEidt/ASCII-Vision" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -214,7 +147,7 @@
             </a>
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Bubblio</h3>
+            <h3>Bubblio</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Bubblio" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -265,7 +198,7 @@
             Use of Natural Language Processing concepts to build a word tokenizer from scratch.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Directory Grapher</h3>
+            <h3>Directory Grapher</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Directory-Grapher" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -277,10 +210,24 @@
             </div>
         </div>
         <p>
-            Creates acyclyic directed graphs of any directory of your choosing!
+            Recursively visualizes the structure of directories. Check out the
+            <a href="https://github.com/AlexEidt/Directory-Grapher/wiki" target="_blank">wiki</a> for this project, which contains
+            directory visualizations for some of the largest repositories on GitHub!
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">UIL/UW Solar Websites</h3>
+            <h3>Website</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/AlexEidt.github.io" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="projectIcon" src="Icons/javascript.png" title="Built with JavaScript" alt="JavaScript Icon" />
+            </div>
+        </div>
+        <p>
+            My Personal Website! A repository of information about me. Built from scratch with HTML, CSS and JavaScript.
+        </p>
+        <div class="projectHeader">
+            <h3>UIL/UW Solar Websites</h3>
             <div>
                 <a href="https://github.com/UW-Solar/Website" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -371,7 +318,7 @@
         <h2>Interests</h2>
         <br />
         <div>
-            <img class="largeIcon" src="Icons/basketball.png" alt="Basketball Icon" />
+            <img class="largeIcon basketball" src="Icons/basketball.png" alt="Basketball Icon" />
             Basketball.
         </div>
         <div>
@@ -379,15 +326,15 @@
             Football. Dortmund!
         </div>
         <div>
-            <img class="largeIcon" src="Icons/piano.png" alt="Piano Icon" />
-            Piano. Currently learning <i>Rondo alla Turca</i>.
+            <img class="largeIcon" src="Icons/piano.png" alt="Piano Icon" onmouseover="this.src='Icons/piano-playing.gif'" onmouseout="this.src='Icons/piano.png'" />
+            Piano.
         </div>
         <div>
             <img class="largeIcon" src="Icons/biking.png" alt="Bike Icon" />
             Biking. Exercise and exploration.
         </div>
         <div>
-            <img class="largeIcon blurOnHover" src="Icons/python.png" alt="Python Icon" onclick="toggle(this);" />
+            <img class="largeIcon" src="Icons/python.png" alt="Python Icon" onmouseover="this.src='Icons/formalMagic.png'" onmouseout="this.src='Icons/python.png'" />
             Coding. Python is my favorite.
         </div>
         <br />
@@ -470,31 +417,6 @@
         <br /><br />
     </div>
 </div>
-<div id="Karve" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Karve
-        </h2>
-        <span class="calendar centered">
-            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Karve');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
-            Sept 2021
-        </span>
-        <p>
-            Karve is an affectionately named Seam Carver that can resize images both vertically and horizontally.
-            Seam Carving implements content aware image resizing that preserves the objects in an image while
-            removing the less important background "seams" instead.
-        </p>
-        <img class="centered img-left" width="75%" src="Projects/Karve/karve.png" />
-        <br />
-        <img class="centered img-left" width="75%" src="Projects/Karve/demo2.gif" />
-        <br />
-        <p>
-            This project was made using <b>Java</b>
-            <img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
-        </p>
-        <br />
-    </div>
-</div>
 <div id="ASCII Video" class="hidden">
     <div class="left-content centered">
         <h2 class="left-header">
@@ -516,82 +438,6 @@
         <p>
             This project was made using <b>Python</b>
             <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-        </p>
-        <br />
-    </div>
-</div>
-<div id="Mosaiic" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Mosaiic
-        </h2>
-        <span class="calendar centered">
-            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Mosaiic');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
-            May 2021
-        </span>
-        <p>
-            Mosaiic is a script that creates animated image mosaics. There are several options available, the user
-            can choose to make the mosaic colored, grayscaled or monochrome, and choose to render the image as colored
-            or in ASCII with different font sizes.
-        </p>
-        <img class="centered img-left" width="75%" src="Projects/Mosaiic/balloon.gif" />
-        <br />
-        <img class="centered img-left" width="75%" src="Projects/Mosaiic/balloon-ascii-color-font-13.gif" />
-        <br />
-        <p>
-            This project was made using <b>Go</b>
-            <img class="iconInline invert" src="Icons/golang.png" alt="Go Language Icon" />
-            and <b>Python</b>
-            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-        </p>
-        <br />
-    </div>
-</div>
-<div id="ASCII Vision" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            ASCII Vision
-        </h2>
-        <span class="calendar centered">
-            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'ASCII Vision');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
-            Apr 2021
-        </span>
-        <p>
-            ASCII Vision is a program that uses Python to read in video from a file or a webcam frame by frame,
-            process every frame in C for speed, and then display the filtered frames on a window for the user
-            to see. The shining light of this project is the ASCII filter, however it can be used together with
-            several other filters implemented via convolution.
-        </p>
-        <img class="centered img-left" src="Projects/ASCIIVision/ducks.gif" alt="Duckies ASCII Stream" />
-        <br />
-        <p>
-            This project was made using <b>Python</b>
-            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-        </p>
-        <br />
-    </div>
-</div>
-<div id="Bubblio" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Bubblio
-        </h2>
-        <span class="calendar centered">
-            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Bubblio');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
-            Apr 2021
-        </span>
-        <p>
-            Bubblio is a script that creates scatterplot-style letters and words in various fonts, colors, shapes,
-            densities and orienations. It's built around font bitmaps which are used to create bubbly letters.
-        </p>
-        <p>
-            Bubblio also offers animated letters and words in GIF format, as shown below.
-        </p>
-        <img class="centered" width="75%" src="Projects/Bubblio/bubblio.gif" />
-        <br />
-        <p>
-            This project was made using <b>Go</b>
-            <img class="iconInline invert" src="Icons/golang.png" alt="Go Language Icon" />
         </p>
         <br />
     </div>
@@ -671,90 +517,6 @@
                 <img style="width: 100%" class="invert" src="Projects/GameofLife/snapshot.png" alt="Game of Life Snapshot" />
             </div>
         </div>
-        <br />
-    </div>
-</div>
-<div id="Directory Grapher" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Directory Grapher
-        </h2>
-        <span class="calendar centered">
-            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'Directory Grapher');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
-            Nov 2020
-        </span>
-        <p>
-            The Directory Grapher is a simple tool for visualizing the entire structure of any directory.
-            There are different options and orientations the user can specify to customize their visualization,
-            as well as limiting the depth of the visualization to prevent the graph from becoming
-            too cluttered.
-        </p>
-        <p>
-            Click the image below to cycle through the carousel!
-        </p>
-        <img
-            class="img-carousel centered link"
-            id="DirectoryGrapher-Slideshow"
-            src="Projects/DirectoryGrapher/Demo_Graph_TB.png"
-            alt="Directory Grapher Demo Image"
-            onclick="createCarousel(
-                'DirectoryGrapher',
-                [
-                    'Demo_Graph_TB.png', 'Demo_Graph_Data.png', 
-                    'Demo_Graph_Data_Files.png' 
-                ]
-            );"    
-        />
-        <br />
-        <div
-            id="DirectoryGrapher-Marker"
-            style="width: 33%; border-radius: 1.5rem; border-bottom: 2rem solid whitesmoke; transition: 0.4s;"
-            class="centered"
-        ></div>
-        <br />
-        <p>
-            The script is written in <b>Python</b> <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-            and uses the <a href="https://graphviz.org/" target="_blank">GraphViz</a> library for the visualization.    
-        </p>
-        <br />
-    </div>
-</div>
-<div id="UIL/UW Solar Websites" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            UIL/UW Solar Websites
-        </h2>
-        <span class="calendar centered">
-            <img class="largeIcon invert invertedLink" onclick="toggleLeft('Timeline', 'UIL/UW Solar Websites');" src="Icons/calendar.png" alt="Calendar Icon" title="Go back to Timeline" />
-            Jun 2020 - Sept 2020
-        </span>
-        <p>
-            These were my final projects while at UW Solar, a Registered Student Organization part of the
-            Urban Infrastructure Lab at the University of Washington. The club participates in planning and
-            design of sustainable energy technologies around campus while also advising off-campus organizations
-            on sustainable design.
-        </p>
-        <a href="http://uwsolar.be.uw.edu/" target="_blank">
-            <h3 class="text-center">UW Solar Website</h3>
-        </a>
-        <br />
-        <object class="img-left centered" style="height: 75vh; width: 80%;" data="https://markusschiffer.github.io/Solar2.0/"></object>
-        <br />
-        <a href="https://uil.be.uw.edu/" target="_blank">
-            <h3 class="text-center">Urban Infrastructure Lab<br />(UIL) Website</h3>
-        </a>
-        <br />
-        <object class="img-left centered" style="height: 75vh; width: 80%;" data="https://uil.be.uw.edu/"></object>
-        <br />
-        <p>
-            The UW Solar Website was made using <a href="https://vuejs.org/" target="_blank">Vue JS</a>
-            <img class="iconInline invert" src="Icons/vuejs.png" alt="Vue JS Icon" />
-            and <b>JavaScript</b>.
-        </p>
-        <p>
-            The UIL Website was made using <a href="https://wordpress.com/" target="_blank">WordPress</a>
-            <img class="iconInline invert" src="Icons/wordpress.png" alt="WordPress Icon" />
-        </p>
         <br />
     </div>
 </div>
@@ -975,8 +737,8 @@
                         <img class="invert timeline-icon" src="Icons/TA.png" alt="Chalkboard Icon" title="Teaching Assistant" />
                     </div>
                 </div>
-                <div id="Karve ID" class="link" onclick="toggleLeft('Karve');">
-                    Karve
+                <div>
+                    <b>Karve</b>
                     <img class="invert classIcon" src="Icons/java.png" alt="Java Icon" title="Built with Java" />
                 </div>
                 <a href="https://www.youtube.com/channel/UCubwVFC0Vs1LnA7ZYpCWXew/featured" target="_blank">
@@ -1011,18 +773,18 @@
                         <img class="invert timeline-icon" src="Icons/TA.png" alt="Chalkboard Icon" title="Teaching Assistant" />
                     </div>
                 </div>
-                <div id="Mosaiic ID" class="link" onclick="toggleLeft('Mosaiic');">
-                    Mosaiic
+                <div>
+                    <b>Mosaiic</b>
                     <img class="invert classIcon" src="Icons/golang.png" alt="Golang Icon" title="Built with Go" />
                     <img class="invert classIcon" src="Icons/python.png" alt="Python Language Icon" title="Built with Python" />
                 </div>
-                <div id="ASCII Vision ID" class="link" onclick="toggleLeft('ASCII Vision');">
-                    ASCII Vision
+                <div>
+                    <b>ASCII Vision</b>
                     <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
                     <img class="invert classIcon" src="Icons/C.png" alt="C Language Icon" title="Built with C" />
                 </div>
-                <div id="Bubblio ID" class="link" onclick="toggleLeft('Bubblio');">
-                    Bubblio
+                <div>
+                    <b>Bubblio</b>
                     <img class="invert classIcon" src="Icons/golang.png" alt="Golang Icon" title="Built with Go" />
                 </div>
             </div>
@@ -1071,10 +833,7 @@
                 <div class="row">
                     <div class="col-10 timeline-courses">
                         <b>MATH 324</b>: Multivariable Calculus<br />
-                        <div>
-                            <b>EE 418</b>: Network Security and Cryptography
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>EE 418</b>: Network Security and Cryptography<br />
                         <b>CSE 373</b>: Data Structures and Algorithms<br />
                         <b>CSE 374</b>: Intermediate Programming Concepts and Tools<br />
                     </div>
@@ -1083,11 +842,11 @@
                     </div>
                 </div>
                 <div>
-                    Word Separator
+                    <b>Word Separator</b>
                     <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
                 </div>
-                <div id="Directory Grapher ID" class="link" onclick="toggleLeft('Directory Grapher');">
-                    Directory Grapher
+                <div>
+                    <b>Directory Grapher</b>
                     <img class="invert classIcon" src="Icons/python.png" alt="Python Icon" title="Built with Python" />
                 </div>
                 <div>
@@ -1105,8 +864,8 @@
                     <img class="invert classIcon" src="Icons/uwsolar.png" alt="UW Solar Icon" title="Built with UW Solar" />
                 </div>
                 <div>
-                    <div id="UIL/UW Solar Websites ID" class="link" onclick="toggleLeft('UIL/UW Solar Websites');">
-                        UIL/UW Solar Websites
+                    <div>
+                        <b>UIL/UW Solar Websites</b>
                         <img class="invert classIcon" src="Icons/vuejs.png" alt="VueJS Icon" title="Built with VueJS" />
                         <img class="invert classIcon" src="Icons/javascript.png" alt="Javascript Icon" title="Built with Javascript" />
                         <img class="invert classIcon" src="Icons/wordpress.png" alt="WordPress Icon" title="Built with WordPress" />
@@ -1125,10 +884,7 @@
                 <div class="row">
                     <div class="col-10 timeline-courses">
                         <b>IND E 315</b>: Probability and Statistics for Engineers<br />
-                        <div>
-                            <b>EE 233</b>: Circuit Theory
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>EE 233</b>: Circuit Theory<br />
                         <b>EE 235</b>: Continuous Time Linear Systems<br />
                         <b>CSE 351</b>: The Hardware/Software Interface<br />
                         <b>CSE 391</b>: System and Software Tools<br />
@@ -1147,15 +903,9 @@
                     <div class="col-10 timeline-courses">
                         <b>MATH 307</b>: Differential Equations<br />
                         <b>EE 215</b>: Fundamentals of Electrical Engineering<br />
-                        <div>
-                            <b>EE 271</b>: Digital Circuits and Systems
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>EE 271</b>: Digital Circuits and Systems<br />
                         <b>EE 398</b>: Professional Issues<br />
-                        <div>
-                            <b>CSE 163</b>: Data Programming
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>CSE 163</b>: Data Programming<br />
                     </div>
                     <div class="col-2 timeline-uw">
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
@@ -1178,16 +928,10 @@
             <div class="col timeline-data">
                 <div class="row">
                     <div class="col-10 timeline-courses">
-                        <div>
-                            <b>MATH 308</b>: Matrix Algebra
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>MATH 308</b>: Matrix Algebra<br />
                         <b>PHYS 123</b>: Waves<br />
                         <b>ENGR 231</b>: Introduction to Technical Communication<br />
-                        <div>
-                            <b>CLAS 320</b>: Society and Status in Greece and Rome
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>CLAS 320</b>: Society and Status in Greece and Rome<br />
                     </div>
                     <div class="col-2 timeline-uw">
                         <img class="invert timeline-icon" src="Icons/uw.png" alt="UW Icon" title="Courses at UW" />
@@ -1235,10 +979,7 @@
                     <div class="col-10 timeline-courses">
                         <b>MATH 126</b>: Calculus with Analytic Geometry III<br />
                         <b>CSE 142</b>: Computer Programming I<br />
-                        <div>
-                            <b>ENGL 131</b>: Composition: Exposition
-                            <img class="invert classIcon" src="Icons/scroll.png" alt="Scroll Icon" title="Cool Portfolio!" />
-                        </div>
+                        <b>ENGL 131</b>: Composition: Exposition<br />
                         <b>EE 491</b>: Undergraduate Seminar<br />
                         <b>ENGR 297</b>: Urban Infrastructure Lab<br />
                     </div>
@@ -1269,10 +1010,7 @@
                     <div class="col-10 timeline-courses">
                         <b>MATH 125</b>: Calculus with Analytic Geometry II<br />
                         <b>CHEM 142</b>: General Chemistry<br />
-                        <div>
-                            <b>ART H 201</b>: Western Ancient Art
-                            <img class="invert classIcon" src="Icons/stars.png" alt="Stars Icon" title="Great Course!" />
-                        </div>
+                        <b>ART H 201</b>: Western Ancient Art<br />
                         <b>ENGR 101</b>: Engineering Exploration<br />
                         <b>GEN ST 199</b>: The University Community<br />
                     </div>

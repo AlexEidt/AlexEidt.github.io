@@ -12,44 +12,6 @@ body {
     transition: 0.7s;
 }
 
-/* Fade in content on load. */
-.fadeIn {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 .container {
     height: 100%;
     position: fixed;
@@ -69,12 +31,79 @@ body {
     /*background-color: black;*/
     /*background-color: #c9cf86;*/
     /*background-color: #766d7a;*/
-    /*background-color: #f59642;*/
-    background-color: #5896ec;
+    /*background-color: #f59642;
+    /*background-color: #5896ec;*/
+
+    /* Weave
+    background:
+    linear-gradient(135deg, #5896ec 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #5896ec 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#5896ec;
+    background-size: 64px 128px;*/
+
+    /* Cool Design
+    background-image:
+    radial-gradient(closest-side, transparent 0%, transparent 75%, #5896ec 76%, #5896ec 85%, #0e3263 86%, #0e3263 94%, #032759 95%, #032759 103%, #006bff 104%, #006bff 112%, #4f99ff 113%, #4f99ff 121%, #032759 122%, #032759 130%, #2973d9 131%, #2973d9 140%),
+    radial-gradient(closest-side, transparent 0%, transparent 75%, #5896ec 76%, #5896ec 85%, #0e3263 86%, #0e3263 94%, #032759 95%, #032759 103%, #006bff 104%, #006bff 112%, #4f99ff 113%, #4f99ff 121%, #032759 122%, #032759 130%, #2973d9 131%, #2973d9 140%);
+    background-size: 110px 110px;
+    background-color: #bfd6f5;
+    background-position: 0 0, 55px 55px;*/
+
+    /* Bricks
+    background-color: whitesmoke;
+    background-image: linear-gradient(335deg, #B75A40 23px, transparent 23px),
+    linear-gradient(155deg, #B75A40 23px, transparent 23px),
+    linear-gradient(335deg, #B75A40 23px, transparent 23px),
+    linear-gradient(155deg, #B75A40 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;*/
+
+    background-color:#5896ec;
+    background-image: url("bg.png");
+    background-size: 40em;
+    background-repeat: repeat;
+
     color: whitesmoke;
     overflow-y: scroll;
     display: block;
     transition: '';
+}
+
+/* Move left background left to right on hover as an effect. */
+.left:hover {
+    animation: animatedBackground 100s linear infinite alternate;
+}
+
+@-moz-keyframes animatedBackground { 
+    from {background-position: 0 0;}
+    to {background-position: 100% 100%;}
+}
+@-webkit-keyframes animatedBackground { 
+    from {background-position: 0 0;}
+    to {background-position: 100% 100%;}
+}
+@keyframes animatedBackground {
+    from {background-position: 0 0;}
+    to {background-position: 100% 100%;}
+}
+
+/* Rotate Basketball Icon in "Interests" section on hover. */
+.basketball:hover {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
 }
 
 /* Right side. */
@@ -128,7 +157,7 @@ img.largeIcon {
 /* Main Icon featured on page. */
 img.mainFrame {
     width: 50%;
-    padding-bottom: 10vh;
+    padding-top: 2vh;
     transition: 0.6s;
 }
 
@@ -345,7 +374,8 @@ h3.left-h3 {
         display: none;
     }
     img.mainFrame {
-        width: 85%;
+        padding-top: 40%;
+        width: 75%;
     }
     /* Elements that act as links, but aren't. */
     .link {
