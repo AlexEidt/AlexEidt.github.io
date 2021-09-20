@@ -3,6 +3,12 @@ html {
     overflow-x: hidden;
 }
 
+/* Change highlight color. */
+::-moz-selection, ::selection, ::-webkit-selection {
+    color: #9DC1F2;
+    background: #9DC1F2;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
@@ -87,25 +93,6 @@ body {
     to {background-position: 100% 100%;}
 }
 
-/* Rotate Basketball Icon in "Interests" section on hover. */
-.basketball:hover {
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-}
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
-}
-
 /* Right side. */
 .right {
     right: 0;
@@ -115,6 +102,8 @@ body {
     overflow-y: scroll;
     z-index: 1;
     transition: '';
+    background-image: url('bg-light.png');
+    background-size: 40em;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera. */
@@ -354,6 +343,25 @@ h3.left-h3 {
     right: 0;
 }
 
+/* Rotate Basketball Icon in "Interests" section on hover. */
+.basketball:hover {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 /* Reformat website for smaller screen sizes */
 @media only screen and (min-width: 550px) {
     .left {
@@ -364,6 +372,7 @@ h3.left-h3 {
         width: 60%;
         background: whitesmoke;
         transition: width 2s;
+        background-image: none;
     }
     h1 {
         font-size: 3.5rem;
@@ -374,7 +383,7 @@ h3.left-h3 {
         display: none;
     }
     img.mainFrame {
-        padding-top: 40%;
+        padding-top: 35vh;
         width: 75%;
     }
     /* Elements that act as links, but aren't. */
