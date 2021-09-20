@@ -75,24 +75,6 @@ body {
     transition: '';
 }
 
-/* Move left background left to right on hover as an effect. */
-.left:hover {
-    animation: animatedBackground 100s linear infinite alternate;
-}
-
-@-moz-keyframes animatedBackground { 
-    from {background-position: 0 0;}
-    to {background-position: 100% 100%;}
-}
-@-webkit-keyframes animatedBackground { 
-    from {background-position: 0 0;}
-    to {background-position: 100% 100%;}
-}
-@keyframes animatedBackground {
-    from {background-position: 0 0;}
-    to {background-position: 100% 100%;}
-}
-
 /* Right side. */
 .right {
     right: 0;

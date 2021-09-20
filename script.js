@@ -1,6 +1,14 @@
 $(document).ready(function() {
     // Add year to copyright
     document.getElementById('copyright').innerHTML += ` ${new Date().getFullYear()}`;
+
+    // Move background with mouse.
+    // Code from: https://css-tricks.com/moving-backgrounds-with-mouse-position/
+    const background = document.querySelector(".left");
+    background.addEventListener("mousemove", (e) => {
+        background.style.backgroundPositionX = -e.offsetX + "px";
+        background.style.backgroundPositionY = -e.offsetY + "px";
+    });
 });
 
 // Create Image carousels given a list of file names.
