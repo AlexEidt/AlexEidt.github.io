@@ -68,7 +68,7 @@ body {
     background-image: url("canyon.jpg");
     /*background-size: 40em;*/
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: center;
     will-change: transform;
     
