@@ -15,9 +15,6 @@ function toggleBackground() {
     const background = document.getElementsByClassName('left')[0];
     switch (background.style.backgroundImage) {
         case 'url("canyon.jpg")':
-            background.style.backgroundImage = 'url("road.jpg")';
-            break;
-        case 'url("road.jpg")':
             background.style.backgroundImage = 'url("rocks.jpg")';
             break;
         case 'url("rocks.jpg")':
