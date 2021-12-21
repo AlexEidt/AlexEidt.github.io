@@ -7,9 +7,28 @@ $(document).ready(function() {
     const background = document.querySelector(".left");
     background.addEventListener("mousemove", (e) => {
         background.style.backgroundPositionX = -e.offsetX + "px";
-        background.style.backgroundPositionY = -e.offsetY + "px";
     });
 });
+
+// Toggle background image on left side on click.
+function toggleBackground() {
+    const background = document.getElementsByClassName('left')[0];
+    switch (background.style.backgroundImage) {
+        case 'url("canyon.jpg")':
+            background.style.backgroundImage = 'url("road.jpg")';
+            break;
+        case 'url("road.jpg")':
+            background.style.backgroundImage = 'url("rocks.jpg")';
+            break;
+        case 'url("rocks.jpg")':
+            background.style.backgroundImage = 'url("forest.jpg")';
+            break;
+        case 'url("forest.jpg")':
+        default:
+            background.style.backgroundImage = 'url("canyon.jpg")';
+            break;
+    }
+}
 
 // Create Image carousels given a list of file names.
 function createCarousel(projectName, files, ID) {
@@ -25,16 +44,6 @@ function createCarousel(projectName, files, ID) {
         let width = document.getElementById(markerID).style.width;
         width = parseInt(width.slice(0, -1));
         document.getElementById(markerID).style.width = `${width + Math.floor(100 / files.length)}%`;
-    }
-}
-
-// Toggle Dark Mode when the Moon Icon is clicked.
-function toggleDarkMode() {
-    const stylesheet = document.getElementById('stylesheet');
-    if (stylesheet.getAttribute('href') === 'style.css') {
-        stylesheet.href = 'dark-theme.css';
-    } else {
-        stylesheet.href = 'style.css';
     }
 }
 

@@ -18,7 +18,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container left">
+    <div class="container left" onclick="toggleBackground();" style="background-image: url('canyon.jpg');">
         <img id="main" class="mainFrame centered invert" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
     </div>
     <div class="container right">
@@ -26,11 +26,9 @@
             <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
             <hr />
         </div>
-        <img id="dark-mode" class="largeIcon link blurOnHover" src="Icons/darkmode.png" title="Dark Mode" alt="Dark Mode Toggle" onclick="toggleDarkMode();" />
         <h2>About</h2>
         <p>
-            I'm an undergraduate student studying <a href="https://www.ece.uw.edu/" target="_blank">Electrical Engineering</a>
-            at the <a href="http://www.washington.edu/" target="_blank">University of Washington</a>.
+            I'm a Software Engineer with a background in Electrical Engineering.
             I am interested in data visualization, digital logic, cryptography, signal processing, computer vision/graphics, and image processing.
         </p>
         <div class="iconStack">
@@ -66,12 +64,37 @@
             <br /><br />
         </div>
         -->
-        <div class="removeOnSmall">
-            <h2 class="link" onclick="toggleLeft(this);">Coursework</h2>
-            <br />
-        </div>
         <h2>Projects</h2>
         <br />
+        <div class="projectHeader">
+            <h3>Pencil</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/Pencil" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <a href="https://youtu.be/1DDuwrpiAt8" target="_blank">
+                    <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
+                </a>
+                <img class="projectIcon" src="Icons/kotlin.png" title="Built with Kotlin" alt="Kotlin Logo" />
+            </div>
+        </div>
+        <p>
+            Pencil Sketch Renderer.
+        </p>
+        <div class="projectHeader">
+            <h3>CPU</h3>
+            <div>
+                <!--
+                <a href="https://github.com/AlexEidt/CPU" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>-->
+                <img class="largeIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
+            </div>
+        </div>
+        <p>
+            For my <a href="https://alexeidt.pythonanywhere.com/EE469/" target="_blank">EE 469</a> class,
+            I built a 64-Bit 5 Stage Pipelined ARM CPU.
+        </p>
         <div class="projectHeader">
             <h3>Video-IO</h3>
             <div>
@@ -82,7 +105,7 @@
             </div>
         </div>
         <p>
-            Simple Video I/O library in Go using <a href="https://www.ffmpeg.org/" target="_blank">FFMPEG</a>.
+            Simple Video I/O library using <a href="https://www.ffmpeg.org/" target="_blank">FFMPEG</a>.
         </p>
         <div class="projectHeader">
             <h3>Amaze</h3>
@@ -115,6 +138,18 @@
             A Seam Carver implementing content aware image resizing.
         </p>
         <div class="projectHeader">
+            <h3>ASCII Vision</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/ASCII-Vision" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
+            </div>
+        </div>
+        <p>
+            Real-time colored ASCII Streaming on a webcam.
+        </p>
+        <div class="projectHeader">
             <h3>ASCII Video</h3>
             <div>
                 <a href="https://github.com/AlexEidt/ASCII-Video" target="_blank">
@@ -128,16 +163,6 @@
         </div>
         <p>
             A blazing fast ASCII Video and Image Renderer.
-            <br />
-            Applied the ASCII rendering to a webcam stream.
-            <a href="https://github.com/AlexEidt/ASCII-Vision" target="_blank">
-                <img class="iconInline" src="Icons/github.png" title="ASCII Vision on GitHub" alt="GitHub Icon" />
-            </a>
-            <br />
-            Created a video processing tutorial.
-            <a href="https://github.com/AlexEidt/Webcam-Processing-Tutorial" target="_blank">
-                <img class="iconInline" src="Icons/github.png" title="Video Processing Tutorial on GitHub" alt="GitHub Icon" />
-            </a>
         </p>
         <div class="projectHeader">
             <h3>Mosaiic</h3>
@@ -165,12 +190,15 @@
             Creates animated scatterplot-style letters and words.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Side-Scroller</h3>
+            <h3>Side-Scroller</h3>
             <div>
                 <!--
                 <a href="https://github.com/AlexEidt/Frogger" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>-->
+                <a href="https://youtu.be/5JxGhRVQ_Ns" target="_blank">
+                    <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
+                </a>
                 <img class="largeIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
             </div>
         </div>
@@ -206,13 +234,12 @@
             Use of Natural Language Processing concepts to build a word tokenizer from scratch.
         </p>
         <div class="projectHeader">
-            <h3>Directory Grapher</h3>
+            <a href= "https://github.com/AlexEidt/Directory-Grapher/wiki" target="_blank">
+                <h3>Directory Grapher</h3>
+            </a>
             <div>
                 <a href="https://github.com/AlexEidt/Directory-Grapher" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <a href="https://github.com/AlexEidt/Directory-Grapher/wiki" target="_blank">
-                    <img class="projectIcon" src="Icons/folder.png" title="Check out some examples!" alt="Folder Icon" />
                 </a>
                 <a href="https://www.youtube.com/watch?v=zlxg3gx0A_0" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
@@ -255,7 +282,7 @@
             for editing the UW Solar site.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Word Search Generator</h3>
+            <h3>Word Search Generator</h3>
             <div>
                 <a href="https://github.com/AlexEidt/WordSearch" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -268,12 +295,15 @@
             to create randomized and customized word search puzzles.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Frogger</h3>
+            <h3>Frogger</h3>
             <div>
                 <!--
                 <a href="https://github.com/AlexEidt/Frogger" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>-->
+                <a href="https://youtu.be/7PtEgpOFYQU" target="_blank">
+                    <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
+                </a>
                 <img class="largeIcon" src="Icons/verilog.png" title="Built with System Verilog" alt="System Verilog Logo" />
             </div>
         </div>
@@ -296,7 +326,9 @@
             I built this library to support the <b>UW Course Planner</b> project.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">UW Course Planner</h3>
+            <a href="https://alexeidt.pythonanywhere.com/" target="_blank">
+                <h3>UW Course Planner</h3>
+            </a>
             <div>
                 <a href="https://github.com/AlexEidt/UW-Course-Planner" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -307,12 +339,11 @@
             </div>
         </div>
         <p>
-            The <a href="https://alexeidt.pythonanywhere.com/" target="_blank">UW Course Planner</a> 
-            is a web app with geospatial schedule visualization on a campus map, recursive course prerequisite tree generation
+            A web app with geospatial schedule visualization on a campus map, recursive course prerequisite tree generation
             and course keyword search for courses offered at UW.
         </p>
         <div class="projectHeader">
-            <h3 class="link" onclick="toggleLeft(this);">Basketball Statistics Tracking</h3>
+            <h3>Basketball Statistics Tracking</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Basketball-Statistics-Tracking" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
@@ -358,74 +389,6 @@
 </html>
 
 <div id="storage" class="hidden"></div>
-<div id="Coursework" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            <span>
-                <a href="https://www.washington.edu/" target="_blank">
-                    <img id="uwIcon" class="invert invertedLink" src="Icons/uw.png" alt="UW Icon" />
-                </a>
-            </span>
-            Coursework
-        </h2>
-        <br />
-        <h2 class="left-h2-line">Year 1</h2>
-        <h3 class="left-h3">Autumn 2018</h3>
-        <b>MATH 125</b>: Calculus with Analytic Geometry II<br />
-        <b>CHEM 142</b>: General Chemistry<br />
-        <b>ART H 201</b>: Survey of Western Ancient Art<br />
-        <b>ENGR 101</b>: Engineering Exploration<br />
-        <b>GEN ST 199</b>: The University Community<br />
-        <h3 class="left-h3">Winter 2019</h3>
-        <b>MATH 126</b>: Calculus with Analytic Geometry III<br />
-        <b>CSE 142</b>: Computer Programming I<br />
-        <b>ENGL 131</b>: Composition: Exposition<br />
-        <b>EE 491</b>: Undergraduate Seminar<br />
-        <b>ENGR 297</b>: Urban Infrastructure Lab<br />
-        <h3 class="left-h3">Spring 2019</h3>
-        <strike><b>MATH 308</b>: Matrix Algebra</strike><br />
-        <b>PHYS 122</b>: Electromagnestism<br />
-        <b>CSE 143</b>: Computer Programming II<br />
-        <b>ENGR 497</b>: Urban Infrastructure Lab<br />
-        <br />
-        <h2 class="left-h2-line">Year 2</h2>
-        <h3 class="left-h3">Autumn 2019</h3>
-        <b>MATH 308</b>: Matrix Algebra<br />
-        <b>PHYS 123</b>: Waves<br />
-        <b>ENGR 231</b>: Introduction to Technical Communication<br />
-        <b>CLAS 320</b>: Society and Status in Greece and Rome<br />
-        <h3 class="left-h3">Winter 2020</h3>
-        <b>MATH 307</b>: Differential Equations<br />
-        <b>EE 215</b>: Fundamentals of Electrical Engineering<br />
-        <b>EE 271</b>: Digital Circuits and Systems<br />
-        <b>EE 398</b>: Professional Issues<br />
-        <b>CSE 163</b>: Intermediate Data Programming<br />
-        <h3 class="left-h3">Spring 2020</h3>
-        <b>IND E 315</b>: Probability and Statistics for Engineers<br />
-        <b>EE 233</b>: Circuit Theory<br />
-        <b>EE 235</b>: Continuous Time Linear Systems<br />
-        <b>CSE 351</b>: The Hardware/Software Interface<br />
-        <b>CSE 391</b>: System and Software Tools<br />
-        <br />
-        <h2 class="left-h2-line">Year 3</h2>
-        <h3 class="left-h3">Autumn 2020</h3>
-        <b>MATH 324</b>: Multivariable Calculus<br />
-        <b>EE 418</b>: Network Security and Cryptography<br />
-        <b>CSE 373</b>: Data Structures and Algorithms<br />
-        <b>CSE 374</b>: Intermediate Programming Concepts and Tools<br />
-        <h3 class="left-h3">Winter 2021</h3>
-        <b>EE 341</b>: Discrete Time Linear Systems<br />
-        <b>EE 371</b>: Design of Digital Circuits and Systems<br />
-        <h3 class="left-h3">Spring 2021</h3>
-        <b>EE 419</b>: Introduction to Computer-Communication Networks<br />
-        <b>CSE 455</b>: Computer Vision<br />
-        <b>ENGR 333</b>: Advanced Technical Communication in the Engineering Workplace<br />
-        <h3 class="left-h3">Summer 2021</h3>
-        <b>EE 331</b>: Devices and Circuits I<br />
-        <b>EE 474</b>: Introduction to Embedded Computing Systems<br />
-        <br /><br />
-    </div>
-</div>
 <div id="Side-Scroller" class="hidden">
     <div class="left-content centered">
         <h2 class="left-header">
@@ -449,36 +412,6 @@
             No HTML video support in this browser
         </video>
         <br />
-        <p>
-            This project was made using <b>SystemVerilog</b>
-            <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />
-        </p>
-        <br />
-    </div>
-</div>
-<div id="Word Search Generator" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Word Search Generator
-        </h2>
-        <p>
-            A simple Word Search puzzle creator. The user opens the application via the command line,
-            where they are introduced to the program and can enter parameters (color, board size, starting words)
-            to customize their experience. The user can also choose to leave out the starting words and
-            let the program randomly choose words from a large dictionary file.
-        </p>
-        <video class="centered img-left" width="90%" controls muted>
-            <source src="Projects/WordSearch/WordSearchUI.mp4" type="video/mp4">
-            No HTML video support in this browser
-        </video>
-        <br />
-        <p>
-            This application was made using <b>Python</b>
-            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" />
-            and the <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">tKinter</a>
-            framework for the UI.
-        </p>
-        <br />
     </div>
 </div>
 <div id="Frogger" class="hidden">
@@ -496,130 +429,6 @@
             <source src="Projects/Frogger/Frogger_Demo.mp4" type="video/mp4">
             No HTML video support in this browser
         </video>
-        <br />
-        <p>
-            This project was made using <b>SystemVerilog</b>
-            <img class="iconInline invert" src="Icons/verilog.png" alt="SystemVerilog Icon" />
-        </p>
-        <br />
-    </div>
-</div>
-<div id="UW Course Planner" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            <a href="https://alexeidt.pythonanywhere.com/" target="_blank">
-                UW Course Planner
-            </a>
-        </h2>
-        <p>
-            I got the idea for this project while at the
-            <a href="https://www.hackathon.io/angelhack-2019-seattle" target="_blank">AngelHack 2019 Hackathon</a>
-            in Seattle. I went with a friend and pitched the idea. It was my first time working with Python, so I was
-            learning the language while working on this project. We worked deep into the night and unfortunately
-            didn't get anywhere. The next day, we both left the Hackathon early, and I took it upon myself to
-            go back to the drawing board and rebuild the project from the ground up. After putting most of my summer
-            break into it, I finally completed the project and had built a foundation in Python.
-        </p>
-        <br />
-        <object class="img-left centered" style="height: 75vh; width: 80%;" data="https://alexeidt.pythonanywhere.com/"></object>
-        <br />
-        <p>
-            After successful completion of the project, I reached out to UW IT to let them know about it.
-            I presented the project to the <a href="https://www.washington.edu/uwit/divisions/as/aca/" target="_blank">
-            UW IT Academic Experience Design & Delivery Team</a> to improve
-            <a href="https://myplan.uw.edu/home/#/" target="_blank">MyPlan</a>, the existing course management
-            tool at UW. The meeting went well and actually led to a course keyword search feature being added
-            to MyPlan!
-        </p>
-        <p>
-            The UW Course Planner is basically a course management/lookup tool for all three UW Campuses.
-            It features prerequisite trees for every course that recursively outline all prerequisites
-            for any given course. As a bonus, these graphics are clickable as well! Clicking on any course in
-            the graph will bring you to its page!
-        </p>
-        <object class="img-left centered" data="Projects/UWCoursePlanner/EE233.svg"></object>
-        <br />
-        <p>
-            In addition to this, the connections of all courses in a given department are shown by their prerequisite
-            connections to one another. This helps to give an overview of the department.
-        </p>
-        <object class="img-left centered" data="Projects/UWCoursePlanner/EE.svg"></object>
-        <br />
-        <p>
-            It also features schedule visualization on a campus map so that students can see where their
-            courses are located on campus.
-        </p>
-        <a href="https://alexeidt.pythonanywhere.com/geocode/" target="_blank">
-            <img class="img-left centered" src="Projects/UWCoursePlanner/Map.PNG" alt="Schedule Visualization on Campus Map" />
-        </a>
-        <br />
-        <p>
-            Additionally, it features a keyword search for course descriptions.
-        </p>
-        <a href="https://alexeidt.pythonanywhere.com/keyword/" target="_blank">
-            <img class="img-left centered" src="Projects/UWCoursePlanner/KeywordSearch.PNG" alt="Course Keyword Search" />
-        </a>
-        <br />
-        <p>
-            In order to get all the data to display on this website, I built a library called
-            <a href="https://pypi.org/project/uwtools/" target="_blank">uwtools</a>
-            that parses the UW Time Schedule and Course Catalogs into Dictionaries and DataFrames. It's basically a web scraper using
-            <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">BeautifulSoup</a>
-            and <a href="https://pandas.pydata.org/" target="_blank">pandas</a>.
-        </p>
-        <p>
-            The backend of this web app was made with <b>Python</b>
-            <img class="iconInline invert" src="Icons/python.png" alt="Python Icon" /> using the
-            <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a>
-            framework. The <a href="https://pandas.pydata.org/" target="_blank">pandas</a> library is used to manage course data and
-            <a href="https://graphviz.org/" target="_blank">GraphViz</a> is used to create the prerequisite trees. The
-            frontend is made using <b>HTML</b>, <b>CSS</b>,
-            <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <b>JavaScript</b>
-            <img class="iconInline invert" src="Icons/javascript.png" alt="JavaScript Icon" />.
-            The map is made with <a href="https://leafletjs.com/" target="_blank">Leaflet</a>.
-        </p>
-        <br />
-    </div>
-</div>
-<div id="Basketball Statistics Tracking" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Basketball Statistics Tracking
-        </h2>
-        <p>
-            While playing intramural basketball this project idea came to mind. I wanted to create something
-            that would allow me to easily track statistics for each player in a basketball team. Using the
-            basic Java/Programming knowledge I got from the introductory CS courses at UW, I spent around 8 months
-            creating this app.
-        </p>
-        <p>
-            Click the image below to cycle through the carousel!
-        </p>
-        <img
-            class="img-carousel centered link"
-            id="BasketballStatisticsTracking-Slideshow"
-            src="Projects/BasketballStatisticsTracking/GetPlayersPanelwPlayers.png"
-            alt="Basketball Statistics Tracking Demo Image"
-            onclick="createCarousel(
-                'BasketballStatisticsTracking',
-                [
-                    'GetPlayersPanelwPlayers.png', 'StartersPanelwPlayers.png', 'SettingsWindow.png',
-                    'ManagementPanelNoBench.png', 'ManagementPanelwBench.png', 'PlayerSubstitution.png',
-                    'AddStatPanel.png', 'BoxScoreTable.png', 'UndoButton.png'
-                ]
-            );"    
-        />
-        <br />
-        <div
-            id="BasketballStatisticsTracking-Marker"
-            style="width: 11%; border-radius: 1.5rem; border-bottom: 2rem solid whitesmoke; transition: 0.4s;"
-            class="centered"
-        ></div>
-        <br />
-        <p>
-            This project is made in <b>Java</b><img class="iconInline invert" src="Icons/java.png" alt="Java Icon" />
-            and the UI is made with <b>Java Swing</b>.
-        </p>
         <br />
     </div>
 </div>
