@@ -17,14 +17,12 @@
     <link rel="icon" type="image/png" href="Icons/favicon.png"/>
     <script src="script.js"></script>
 
-    <!--Preload Background Images-->
-    <link rel="preload" as="image" href="canyon.jpg" />
-    <link rel="preload" as="image" href="rocks.jpg" />
+    <!--Preload Background Image-->
     <link rel="preload" as="image" href="forest.jpg" />
 
 </head>
 <body>
-    <div class="container left link" onclick="toggleBackground();" style="background-image: url('forest.jpg');">
+    <div class="container left" style="background-image: url('forest.jpg');">
         <img id="main" class="mainFrame centered invert" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
     </div>
     <div class="container right">
@@ -72,6 +70,18 @@
         -->
         <h2>Projects</h2>
         <br />
+        <div class="projectHeader">
+            <h3>aio</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/aio" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
+            </div>
+        </div>
+        <p>
+            An Audio I/O Library to Read, Write and Play Audio using FFmpeg, FFprobe and FFplay.
+        </p>
         <div class="projectHeader">
             <h3>qr</h3>
             <div>
@@ -471,48 +481,3 @@
     </div>
 </body>
 </html>
-
-<div id="storage" class="hidden"></div>
-<div id="Side-Scroller" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Side-Scroller
-        </h2>
-        <p>
-            For my final project in <a href="https://alexeidt.pythonanywhere.com/EE371/" target="_blank">EE 371: Design of Digital Circuits and Systems</a>, my partner and I chose to implement a
-            Side-Scroller Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
-        </p>
-        <p>
-            The game consists of the player which must avoid the enemies (diamonds) coming towards them
-            from right to left across the screen. The player can move up and down by pressing the
-            left and right mouse buttons. Every time the player survives a "wave" of enemies, their score
-            gets incremented, which is displayed as hex numbers on three of the DE1's seven-segment displays.
-            Every time the user survives a wave, a note is played via speakers to signal this. If the user
-            is to collide with an enemy, their score will reset to zero and that same note will be played, just
-            three times as long.
-        </p>
-        <video class="centered img-left" width="90%" controls muted>
-            <source src="Projects/Side-Scroller/Side-Scroller.mp4" type="video/mp4">
-            No HTML video support in this browser
-        </video>
-        <br />
-    </div>
-</div>
-<div id="Frogger" class="hidden">
-    <div class="left-content centered">
-        <h2 class="left-header">
-            Frogger
-        </h2>
-        <p>
-            For my final project in <a href="https://alexeidt.pythonanywhere.com/EE271/" target="_blank">EE 271: Digital Circuits and Systems</a>, I chose to implement the
-            Frogger Game on a Field Programmable Gate Array (FPGA) on an Altera DE1 SOC Board.
-        </p>
-        <img class="img-left centered" src="Projects/Frogger/DE1_SoC_Board.JPG" alt="Altera DE1 SOC Board" />
-        <br />
-        <video class="centered img-left" width="90%" controls muted>
-            <source src="Projects/Frogger/Frogger_Demo.mp4" type="video/mp4">
-            No HTML video support in this browser
-        </video>
-        <br />
-    </div>
-</div>
