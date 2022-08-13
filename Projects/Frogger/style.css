@@ -37,7 +37,7 @@ pertain only to the least significant bit of every pixel in the red channel of t
 1 => Least Significant Bits
 8 => Most Significant Bits
 
-Each area can be considered a bit mask. Combined them as shown below.
+Each area can be considered a bit mask. Combine them as shown below.
 There are 8 layers. The final result is a byte array.
 
 (1 << 0 | 2 << 1 | 3 << 2 | 4 << 3 | 5 << 4 | 6 << 5 | 7 << 6 | 8 << 7).jpg
