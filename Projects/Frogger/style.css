@@ -31,16 +31,14 @@ R = 199 + 4*618, 1237
 
 S = 199 + 4*618, 1237 + 2*427
 
+QPRS encompasses an area of the background image. The following instructions
+pertain only to the least significant bit of every pixel in the red channel of this area.
+
 1 => Least Significant Bits
 8 => Most Significant Bits
 
-Stack them up and get a byte array!
+Each area can be considered a bit mask. Combined them as shown below.
+There are 8 layers. The final result is a byte array.
 
 (1 << 0 | 2 << 1 | 3 << 2 | 4 << 3 | 5 << 4 | 6 << 5 | 7 << 6 | 8 << 7).jpg
-
-First byte of the data:
-    Has its LSB in area 1.
-    Has the next bit in area 2.
-    ...
-    Has its MSB in area 8.
 */
