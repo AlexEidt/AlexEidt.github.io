@@ -9,13 +9,46 @@ html {
     background: #9DC1F2;
 }
 
+/* bungee-regular - latin */
+@font-face {
+    font-family: 'Bungee';
+    font-style: normal;
+    src: url('Fonts/bungee-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('Fonts/bungee-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Fonts/bungee-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Fonts/bungee-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('Fonts/bungee-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Fonts/bungee-v11-latin-regular.svg#Bungee') format('svg'); /* Legacy iOS */
+}
+
+/* bungee-shade-regular - latin */
+@font-face {
+    font-family: 'Bungee Shade';
+    font-style: normal;
+    src: url('Fonts/bungee-shade-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('Fonts/bungee-shade-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Fonts/bungee-shade-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Fonts/bungee-shade-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('Fonts/bungee-shade-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Fonts/bungee-shade-v11-latin-regular.svg#BungeeShade') format('svg'); /* Legacy iOS */
+  }
+
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Zilla Slab', sans-serif;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     background-color: whitesmoke;
     margin: 0;
     transition: 0.7s;
+}
+
+canvas {
+    /* background-color:#5896ec; */
+    background-color: rgba(0, 0, 0, 0);
+    height: 3rem;
 }
 
 .container {
@@ -31,6 +64,14 @@ body {
     display: flex;
     height: 100%;
     width: 0%;
+
+    padding-top: 30vh;
+    padding-bottom: 5rem;
+    text-align: center;
+    font-size: 9vw;
+    font-family: 'Bungee Shade', sans-serif;
+    line-height: 1;
+    background-image: url('pattern.png');
     /* Alternate Background Colors. */
     /*background-color: #ff4040;*/
     /*background-color: #0004ff;*/
@@ -47,31 +88,31 @@ body {
     background-color:#5896ec;
     background-size: 64px 128px;*/
 
-    /* Cool Design
-    background-image:
+    /* Cool Design */
+    /* background-image:
     radial-gradient(closest-side, transparent 0%, transparent 75%, #5896ec 76%, #5896ec 85%, #0e3263 86%, #0e3263 94%, #032759 95%, #032759 103%, #006bff 104%, #006bff 112%, #4f99ff 113%, #4f99ff 121%, #032759 122%, #032759 130%, #2973d9 131%, #2973d9 140%),
     radial-gradient(closest-side, transparent 0%, transparent 75%, #5896ec 76%, #5896ec 85%, #0e3263 86%, #0e3263 94%, #032759 95%, #032759 103%, #006bff 104%, #006bff 112%, #4f99ff 113%, #4f99ff 121%, #032759 122%, #032759 130%, #2973d9 131%, #2973d9 140%);
     background-size: 110px 110px;
     background-color: #bfd6f5;
-    background-position: 0 0, 55px 55px;*/
+    background-position: 0 0, 55px 55px; */
 
-    /* Bricks
-    background-color: whitesmoke;
+    /* Bricks */
+    /* background-color: whitesmoke;
     background-image: linear-gradient(335deg, #B75A40 23px, transparent 23px),
     linear-gradient(155deg, #B75A40 23px, transparent 23px),
     linear-gradient(335deg, #B75A40 23px, transparent 23px),
     linear-gradient(155deg, #B75A40 23px, transparent 23px);
     background-size: 58px 58px;
-    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;*/
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px; */
 
-    /*background-color:#5896ec;*/
-    /*background-size: 40em;*/
+    background-color:#5896ec;
+    /* background-size: 40em; */
     background-size: cover;
     background-repeat: repeat-x;
     background-position: center;
     will-change: transform;
     
-    color: whitesmoke;
+    color: black;
     overflow-y: scroll;
     display: block;
     transition: '';
@@ -96,6 +137,7 @@ body {
 }
 
 h1 {
+    font-family: 'Bungee', sans-serif;
     text-align: center;
     font-weight: bolder;
     color: black;
@@ -105,12 +147,16 @@ h1 {
 }
 
 h2 {
+    font-family: 'Bungee', sans-serif;
     font-weight: bold;
+    font-size: 2.4rem;
+    padding: 0.2rem;
 }
 
 h3 {
+    font-family: 'Bungee', sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 hr {
@@ -123,7 +169,7 @@ p {
 
 /* Email, Resume, GitHub, LinkedIn and Hobbies Icons. */
 img.largeIcon {
-    width: 4rem;
+    width: 4.5rem;
     padding: 0.5rem;
 }
  
@@ -135,6 +181,7 @@ img.mainFrame {
 }
 
 a:link, a:active, a:hover, a:visited {
+    font-family: 'Bungee', sans-serif;
     color: inherit;
     text-decoration: none;
     font-weight: bold;
@@ -168,6 +215,9 @@ a img:hover, .blurOnHover:hover {
 
 /* Alt header appears on smaller screen sizes/ */
 div.altHeader {
+    font-family: 'Bungee', sans-serif;
+    font-size: 15vw;
+    line-height: 1;
     display: block;
 }
 
@@ -187,12 +237,6 @@ img.projectIcon {
     width: 3rem;
     max-height: 2rem;
     padding-left: 1rem;
-}
-
-/* Icons used in "Coursework" section. */
-img.classIcon {
-    width: 2.5rem;
-    padding-left: 0.2rem;
 }
 
 /* Icons used within paragraphs. */
@@ -219,56 +263,10 @@ img.iconInline {
     text-align: center;
 }
 
-/* Calendar time range header for Projects. */
-.calendar {
-    text-align: center;
-    padding: 0.7rem;
-}
- 
-/* UW Icon used when toggling coursework. */
-#uwIcon {
-    width: 6rem;
-    padding: 0.5rem;
-}
-
 /* Content that appears on left side when links are clicked. */
 .left-content {
     padding-top: 5vh;
     width: 95%;
-}
-
-/* Underline of h2 elements in left side. */
-.left-h2-line {
-    border-bottom: 0.15em solid whitesmoke;
-    padding: 0.2em;
-    width: 60%;
-}
-
-/* Headers containing the Quarter labels in Coursework. */
-h3.left-h3 {
-    padding-top: 0.6rem;
-    padding-bottom: 0.3rem;
-    font-size: 1.68rem;
-    font-style: italic;
-}
-
-/* Header for content in left container. */
-.left-header {
-    text-align: center;
-}
-
-/* Images on left container that occupy the entire width. */
-.img-left {
-    width: 85%;
-    background: whitesmoke;
-    border: 5px solid whitesmoke;
-}
-
-/* Carousel Images*/
-.img-carousel {
-    width: 90%;
-    background: whitesmoke;
-    border: 5px solid whitesmoke;
 }
 
 /* Elements to be hidden. */
@@ -291,40 +289,6 @@ h3.left-h3 {
     font-weight: bold;
     font-size: 2.5rem;
     text-align: right;
-}
-
-.timeline-data {
-    display: block;
-}
-
-/* Timeline coursework brackets. */
-.timeline-courses {
-    background-image: 
-        linear-gradient(whitesmoke, whitesmoke),
-        linear-gradient(whitesmoke, whitesmoke);
-    
-    background-repeat: no-repeat;
-    background-size: 8px 3px;
-    background-position: top right, bottom right;
-  
-    border: solid whitesmoke;
-    border-width: 0 5px 0 0;
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* UW Icons in Timeline. */
-.timeline-uw {
-    visibility: hidden;
-}
-
-/* Moon Icon that Toggles Dark Mode */
-#dark-mode {
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 /* Rotate Basketball Icon in "Interests" section on hover. */
@@ -399,14 +363,8 @@ h3.left-h3 {
     div.projectHeader {
         display: flex;
     }
-    .timeline-year {
-        text-align: left;
-    }
     .left-content {
         width: 85%;
-    }
-    .timeline-uw {
-        visibility: visible;
     }
     .removeOnLarge {
         display: inline;

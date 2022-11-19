@@ -3,6 +3,10 @@
 <head>
     <title>Alex Eidt</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+
     <!--BootStrap-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script
@@ -18,23 +22,22 @@
     <script src="script.js"></script>
 
     <!--Preload Background Image-->
-    <!--[(((Red channel, Row 0:610, Col 0:610) >> 3) & 1) * 255]-->
-    <link rel="preload" as="image" href="forest.png" />
+    <link rel="preload" as="image" href="pattern.png" />
 
 </head>
-<body>
-    <div class="container left" style="background-image: url('forest.png');">
-        <img id="main" class="mainFrame centered invert" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
+<body onmousemove="drawCube(event);">
+    <div class="container left">
+        Alex Eidt
     </div>
     <div class="container right">
         <div class="altHeader">
-            <img id="main" class="mainFrame centered" src="Icons/mainIcon.png" alt="Alex Eidt Icon" />
+            <h1 data-heading="Slide">Alex Eidt</h1>
             <hr />
         </div>
         <h2>About</h2>
         <p>
-            I'm a Software Engineer with a background in Electrical Engineering.
-            I am interested in data visualization, digital logic, cryptography, signal processing, computer vision/graphics, and non-photorealistic rendering.
+            I am a Software Engineer with a background in Electrical Engineering.
+            My interests include systems programming, digital logic, cryptography, signal processing, computer vision/graphics, and non-photorealistic rendering.
         </p>
         <div class="iconStack">
             <div>
@@ -55,22 +58,31 @@
                 </a>
                 <a class="removeOnMedium" href="https://github.com/AlexEidt" target="_blank">GitHub</a>
             </div>
-            <div>
+            <!-- <div>
                 <a href="https://www.youtube.com/channel/UCubwVFC0Vs1LnA7ZYpCWXew/featured" target="_blank">
                     <img class="largeIcon" src="Icons/youtube.png" title="YouTube" alt="YouTube Icon" />
                 </a>
                 <a class="removeOnMedium" href="https://www.youtube.com/channel/UCubwVFC0Vs1LnA7ZYpCWXew/featured" target="_blank">YouTube</a>
+            </div> -->
+        </div>
+        <br />
+        <div style="display: flex">
+            <h2>Projects</h2>
+            <canvas id="canvas"></canvas>
+        </div>
+        <br />
+        <!-- <div class="projectHeader">
+            <h3>Cube</h3>
+            <div>
+                <a href="https://github.com/AlexEidt/Cube" target="_blank">
+                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
+                </a>
+                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
             </div>
         </div>
-        <br />
-        <!--
-        <div class="removeOnSmall">
-            <h2 class="link removeOnSmall" onclick="toggleLeft(this);">Timeline</h2>
-            <br /><br />
-        </div>
-        -->
-        <h2>Projects</h2>
-        <br />
+        <p>
+            Rotating Cubes and Tesseracts.
+        </p> -->
         <div class="projectHeader">
             <h3>Toasty</h3>
             <div>
@@ -90,9 +102,9 @@
                 <a href="https://github.com/AlexEidt/Dino" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtu.be/AWFPby-Scac" target="_blank">
+                <!-- <a href="https://youtu.be/AWFPby-Scac" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="projectIcon" src="Icons/C++.png" title="Built with C++" alt="C++ Logo" />
             </div>
         </div>
@@ -122,48 +134,31 @@
                 <a href="https://github.com/AlexEidt/qr" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtube.com/shorts/8UkQl_EF1aU" target="_blank">
+                <!-- <a href="https://youtube.com/shorts/8UkQl_EF1aU" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
             </div>
         </div>
-        <!--Did you find the secret? Top left, check it out.-->
         <p>
             QR Code Generator built in pure Go.
         </p>
 
-        <!-- <div class="projectHeader">
-            <h3>Smooth Life</h3>
-            <div>
-                <a href="https://github.com/AlexEidt/Smooth-Life" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <a href="https://youtu.be/puikFy4fGcY" target="_blank">
-                    <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
-                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
-            </div>
-        </div>
-        <p>
-            An implementation of Smooth Life, a Continuous Cellular Automaton.
-        </p> -->
-
-        <!-- <div class="projectHeader">
+        <div class="projectHeader">
             <h3>Fractal Explorer</h3>
             <div>
                 <a href="https://github.com/AlexEidt/Fractal-Explorer" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtu.be/YYDI2-Y84Co" target="_blank">
+                <!-- <a href="https://youtu.be/YYDI2-Y84Co" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
             </div>
         </div>
         <p>
             Escape-Time Fractal Explorer for Mandelbrot and Julia Sets.
-        </p> -->
+        </p>
 
         <div class="projectHeader">
             <h3>Quart</h3>
@@ -171,9 +166,9 @@
                 <a href="https://github.com/AlexEidt/Quart" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtu.be/5lEGKCecT-Q" target="_blank">
+                <!-- <a href="https://youtu.be/5lEGKCecT-Q" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
             </div>
         </div>
@@ -263,28 +258,15 @@
                 <a href="https://github.com/AlexEidt/Karve" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtu.be/-oTGqBRkdy0" target="_blank">
+                <!-- <a href="https://youtu.be/-oTGqBRkdy0" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="projectIcon" src="Icons/java.png" title="Built with Java" alt="Java Logo" />
             </div>
         </div>
         <p>
-            Real Time Seam Carving with object removal.
+            Real-time Seam Carving with object removal.
         </p>
-
-        <!-- <div class="projectHeader">
-            <h3>ASCII Vision</h3>
-            <div>
-                <a href="https://github.com/AlexEidt/ASCII-Vision" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
-            </div>
-        </div>
-        <p>
-            Real-time colored ASCII Streaming on a webcam.
-        </p> -->
 
         <div class="projectHeader">
             <h3>ASCII Video</h3>
@@ -301,33 +283,6 @@
         <p>
             A blazing fast ASCII Video and Image Renderer.
         </p>
-
-        <!-- <div class="projectHeader">
-            <h3>Mosaiic</h3>
-            <div>
-                <a href="https://github.com/AlexEidt/Mosaiic" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
-                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Logo" />
-            </div>
-        </div>
-        <p>
-            Creates animated image mosaics with colored ASCII.
-        </p> -->
-
-        <!-- <div class="projectHeader">
-            <h3>Bubblio</h3>
-            <div>
-                <a href="https://github.com/AlexEidt/Bubblio" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <img class="largeIcon" src="Icons/golang.png" title="Built with Go" alt="Go Logo" />
-            </div>
-        </div>
-        <p>
-            Creates animated scatterplot-style letters and words.
-        </p> -->
 
         <div class="projectHeader">
             <h3>Side-Scroller</h3>
@@ -353,28 +308,15 @@
                 <a href="https://github.com/AlexEidt/Game-of-Life-Simulator" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtu.be/TAyOt6cEmAI" target="_blank">
+                <!-- <a href="https://youtu.be/TAyOt6cEmAI" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="projectIcon" src="Icons/kotlin.png" title="Built with Kotlin" alt="Kotlin Icon" />
             </div>
         </div>
         <p>
             Conways Game of Life Simulator with image and video recording.
         </p>
-
-        <!-- <div class="projectHeader">
-            <h3>Word Separator</h3>
-            <div>
-                <a href="https://github.com/AlexEidt/Word-Separator" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Icon" />
-            </div>
-        </div>
-        <p>
-            Use of Natural Language Processing concepts to build a word tokenizer from scratch.
-        </p> -->
 
         <!-- <div class="projectHeader">
             <a href= "https://github.com/AlexEidt/Directory-Grapher/wiki" target="_blank">
@@ -407,35 +349,15 @@
             My Personal Website! A repository of information about me.
         </p> -->
 
-        <!-- <div class="projectHeader">
-            <h3>UIL/UW Solar Websites</h3>
-            <div>
-                <a href="https://github.com/UW-Solar/Website" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <img class="projectIcon" src="Icons/vuejs.png" title="UW Solar site built with Vue JS" alt="Vue JS Framework Icon" />
-                <img class="projectIcon" src="Icons/javascript.png" title="UW Solar site built with JavaScript" alt="Javascript Icon" />
-                <img class="projectIcon" src="Icons/wordpress.png" title="UIL Site built with WordPress" alt="WordPress Icon" />
-            </div>
-        </div>
-        <p>
-            I created and designed the new website for <a href="http://uwsolar.be.uw.edu/" target="_blank">UW Solar</a>
-            and its parent lab, the <a href="http://uil.be.uw.edu/" target="_blank">Urban Infrastructure Lab</a> (UIL)
-            along with a fellow Computer Science undergraduate. Our goal was to make the site simple and robust
-            so future students could edit and understand it easily. To help with this, I created
-            <a href="https://github.com/UW-Solar/Website-Reference" target="_blank">documentation</a>
-            for editing the UW Solar site.
-        </p> -->
-
         <div class="projectHeader">
             <h3>Word Search Generator</h3>
             <div>
                 <a href="https://github.com/AlexEidt/WordSearch" target="_blank">
                     <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
                 </a>
-                <a href="https://youtu.be/Uo4lmT6xIDQ" target="_blank">
+                <!-- <a href="https://youtu.be/Uo4lmT6xIDQ" target="_blank">
                     <img class="projectIcon" src="Icons/youtube.png" title="Check out the project on YouTube!" alt="Youtube Icon" />
-                </a>
+                </a> -->
                 <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Icon" />
             </div>
         </div>
@@ -460,20 +382,6 @@
             Frogger is an old classic where the player needs to avoid oncoming traffic to safely cross the road.
             I chose to implement this game on a FPGA on an Altera DE1 SoC Board for my
             <a href="https://alexeidt.pythonanywhere.com/EE271/" target="_blank">EE 271</a> final project.
-        </p> -->
-
-        <!-- <div class="projectHeader">
-            <h3><a href="https://pypi.org/project/uwtools/" target="_blank">uwtools</a></h3>
-            <div>
-                <a href="https://github.com/AlexEidt/uwtools" target="_blank">
-                    <img class="projectIcon" src="Icons/github.png" title="Check out the project on GitHub!" alt="GitHub Icon" />
-                </a>
-                <img class="projectIcon" src="Icons/python.png" title="Built with Python" alt="Python Icon" />
-            </div>
-        </div>
-        <p>
-            uwtools is an API to access course and time schedule data for courses at the University of Washington.
-            I built this library to support the <b>UW Course Planner</b> project.
         </p> -->
 
         <div class="projectHeader">
@@ -509,7 +417,7 @@
         </p> -->
 
         <h2>Interests</h2>
-        <br />
+        <div style="padding: 0.5rem"></div>
         <div>
             <img class="largeIcon basketball" src="Icons/basketball.png" alt="Basketball Icon" />
             Basketball.
@@ -528,7 +436,7 @@
         </div>
         <div>
             <img class="largeIcon" src="Icons/python.png" alt="Python Icon" onmouseover="this.src='Icons/formalMagic.png'" onmouseout="this.src='Icons/python.png'" />
-            Coding. Go, Python, Kotlin. In that order.
+            Coding. Go, Python, C, Kotlin. In that order.
         </div>
         <br />
         <br />
