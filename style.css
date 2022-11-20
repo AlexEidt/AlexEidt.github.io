@@ -3,6 +3,13 @@ html {
     overflow-x: hidden;
 }
 
+::selection {
+    background: rgb(221, 255, 176); /* WebKit/Blink Browsers */
+  }
+::-moz-selection {
+    background: rgb(221, 255, 176); /* Gecko Browsers */
+}
+
 /* bungee-regular - latin */
 @font-face {
     font-family: 'Bungee';
