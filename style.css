@@ -87,7 +87,7 @@ canvas {
     color: black;
     overflow-y: scroll;
     display: block;
-    transition: '';
+    transform: '';
 }
 
 .left-text {
@@ -156,12 +156,32 @@ h2 {
     font-weight: bold;
     font-size: 2.4rem;
     padding: 0.2rem;
+    display: inline-block;
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.4rem;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+h2:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 h3 {
     font-family: 'Bungee', sans-serif;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 hr {
@@ -232,8 +252,8 @@ div.projectHeader {
 
 /* Project Icons. */
 img.projectIcon {
-    width: 3rem;
-    max-height: 2rem;
+    width: 3.5rem;
+    max-height: 2.5rem;
     padding-left: 1rem;
 }
 

@@ -25,8 +25,8 @@ function drawCube(e) {
     const ctx = board.getContext('2d');
     ctx.clearRect(0, 0, width, height);
 
-    const angleX = -e.pageX / window.innerWidth * 4;
-    const angleY = -e.pageY / window.innerHeight * 4;
+    const angleX = e.pageX / window.innerWidth * 3;
+    const angleY = e.pageY / window.innerHeight * 3;
 
     const cosX = Math.cos(angleX);
     const sinX = Math.sin(angleX);
