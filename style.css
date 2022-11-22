@@ -184,6 +184,30 @@ h3 {
     font-size: 1.7rem;
 }
 
+h3 span video {
+    width: 50vw;
+    max-height: 35vw;
+}
+ 
+h3 span {
+    display: none;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+h3:hover span {
+    background-color: black;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    border: 0.6rem solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+}
+
 hr {
     border: 2px solid black;
 }
