@@ -4,10 +4,10 @@ html {
 }
 
 ::selection {
-    background: rgb(11, 188, 180); /* WebKit/Blink Browsers */
+    background: rgb(221, 255, 176); /* WebKit/Blink Browsers */
   }
 ::-moz-selection {
-    background: rgb(11, 188, 180); /* Gecko Browsers */
+    background: rgb(221, 255, 176); /* Gecko Browsers */
 }
 
 /* bungee-regular - latin */
