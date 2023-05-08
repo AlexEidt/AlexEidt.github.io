@@ -4,14 +4,14 @@ html {
 }
 
 ::selection {
-    /* background: rgb(221, 255, 176); /* WebKit/Blink Browsers */
+    background: rgb(221, 255, 176); /* WebKit/Blink Browsers */
     /* background: rgb(16, 205, 230); */
-    background: rgb(12, 245, 202);
+    /* background: rgb(12, 245, 202); */
   }
 ::-moz-selection {
-    /* background: rgb(221, 255, 176); /* Gecko Browsers */
+    background: rgb(221, 255, 176); /* Gecko Browsers */
     /* background: rgb(16, 205, 230); */
-    background: rgb(12, 245, 202);
+    /* background: rgb(12, 245, 202); */
 }
 
 /* bungee-regular - latin */
