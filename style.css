@@ -109,6 +109,12 @@ canvas {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: 700ms;
+}
+
+.left-text:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: 1s;
 }
 
 @keyframes fadein {
