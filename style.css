@@ -3,13 +3,15 @@ html {
     overflow-x: hidden;
 }
 
-::selection {
-    background: rgb(221, 255, 176); /* WebKit/Blink Browsers */
+::selection { /* WebKit/Blink Browsers */
+    background: rgb(221, 212, 206);
+    /* background: rgb(221, 255, 176); v1 */
     /* background: rgb(16, 205, 230); */
     /* background: rgb(12, 245, 202); */
   }
-::-moz-selection {
-    background: rgb(221, 255, 176); /* Gecko Browsers */
+::-moz-selection { /* Gecko Browsers */
+    background: rgb(221, 212, 206);
+    /* background: rgb(221, 255, 176); v1 */
     /* background: rgb(16, 205, 230); */
     /* background: rgb(12, 245, 202); */
 }
@@ -50,10 +52,15 @@ body {
     transition: 0.7s;
 }
 
-canvas {
+#canvas {
     /* background-color:#5896ec; */
     background-color: rgba(0, 0, 0, 0);
     height: 4.5rem;
+}
+
+#aztec {
+    display: none;
+    background: whitesmoke;
 }
 
 .container {
@@ -72,7 +79,7 @@ canvas {
 
     padding-top: 30vh;
     padding-bottom: 5rem;
-    background-image: url('pattern.png');
+    background-image: url('theplan.png');
 
     /* Alternate Background Colors. */
     /*background-color: #ff4040;*/
@@ -96,8 +103,8 @@ canvas {
 
 .left-text {
     text-align: center;
-    font-size: 9vw;
-    font-family: 'Bungee Shade', sans-serif;
+    font-size: 5vw;
+    font-family: 'Bungee', sans-serif;
     line-height: 1;
     animation: fadein 4s;
     -moz-animation: fadein 4s; /* Firefox */
@@ -110,11 +117,59 @@ canvas {
     -ms-user-select: none;
     user-select: none;
     transition: 700ms;
+    color: rgba(245, 245, 245, 0.1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 75%;
+    left: 50%;
 }
 
-.left-text:hover {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: 1s;
+.left-text span {
+    display: inline-block;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 60%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    19% {
+        opacity: .2;
+        filter: brightness(.2);
+    }
+
+    20% {
+        opacity: .9;
+    }
+
+    21% {
+        opacity: .1;
+    }
+
+    61% {
+        opacity: .4;
+    }
+
+    62% {
+        opacity: 1;
+    }
+}
+
+.left-text span:nth-child(2) {
+    animation: flicker 6.3s infinite;
+}
+
+.left-text span:nth-child(5) {
+    animation: flicker 7.7s infinite;
+}
+
+.left-text span:nth-child(8) {
+    animation: flicker 6.8s infinite;
+}
+
+.left-text span:nth-child(11) {
+    animation: flicker 18.5s infinite;
 }
 
 @keyframes fadein {
@@ -240,6 +295,7 @@ img.largeIcon {
 
 img.expIcon {
     width: 90%;
+    border-radius: 0.75rem;
 }
 
 img.inlineIcon {

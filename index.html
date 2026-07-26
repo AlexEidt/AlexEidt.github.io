@@ -22,12 +22,15 @@
     <script src="script.js"></script>
 
     <!--Preload Background Image-->
-    <link rel="preload" as="image" href="pattern.png" />
+    <link rel="preload" as="image" href="theplan.png" />
  
 </head>
 <body onmousemove="drawCube(event);">
     <div class="container left">
-        <div class="left-text">Alex Eidt</div>
+        <div class="left-text">
+            <span>A</span><span>l</span><span>e</span><span>x</span>
+            <span>E</span><span>i</span><span>d</span><span>t</span>
+        </div>
     </div>
     <div class="container right">
         <div class="altHeader">
@@ -390,14 +393,27 @@
         <br />
         <h2>Interests</h2>
         <div style="padding: 0.5rem"></div>
-        <div>
-            <img class="largeIcon" src="Icons/biking.png" alt="Bike Icon" />
-            Biking.
-        </div>
-        <div>
-            <img class="largeIcon" src="Icons/git.png" alt="Git Icon" />
-            Programming.
-        </div>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:60%;">
+                    <div>
+                        <img class="largeIcon" src="Icons/biking.png" alt="Bike Icon" />
+                        Biking.
+                    </div>
+                    <div>
+                        <img class="largeIcon" src="Icons/git.png" alt="Git Icon" />
+                        Programming.
+                    </div>
+                    <div>
+                        <img class="largeIcon" src="Icons/book.png" alt="Book Icon" />
+                        Storytelling.
+                    </div>
+                </td>
+                <td>
+                    <img src="Icons/aztec.svg" alt="Code" />
+                </td>
+            </tr>
+        </table>
         <br />
         <br />
         The design of this website was inspired by <a href="http://sub.mersion.cc/" target="_blank">sub.mersion.cc</a>.
