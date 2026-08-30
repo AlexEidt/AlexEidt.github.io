@@ -268,7 +268,8 @@ span {
     -o-animation: fadein 1s; /* Opera */
 }
 
-h3:hover span {
+a:hover span {
+    transform: translateX(-5vw);
     background-color: black;
     display: block;
     position: absolute;
@@ -323,7 +324,7 @@ a:hover {
 }
 
 /* Image links get hover effect. */
-a img:hover, .blurOnHover:hover {
+a img:hover, .blurOnHover:hover, .link.largeIcon:hover {
     transition: 0.4s;
     -webkit-filter: blur(1px);
     filter: blur(1px);
@@ -409,6 +410,30 @@ img.bookIcon {
 .link:hover {
     font-style: italic;
     cursor: pointer;
+}
+
+.projects {
+    width: 100%;
+}
+
+.projects td {
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+
+.projects .tableIcon {
+    width: 5rem;
+    text-align: center;
+}
+
+.projects td:nth-child(2) {
+    width: 13rem;
+    white-space: nowrap;
+}
+
+.projects .projectIcon,
+.projects .largeIcon {
+    vertical-align: middle;
 }
 
 /* Reformat website for smaller screen sizes */
