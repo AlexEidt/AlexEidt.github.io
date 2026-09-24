@@ -5,6 +5,39 @@ $(document).ready(function() {
     drawCube({pageX: 0, pageY: 0});
 });
 
+// Previews don't depend on jQuery, so wire them up as soon as the DOM is ready.
+document.addEventListener('DOMContentLoaded', setupPreviews);
+
+function setupPreviews() {
+    const preview = document.getElementById('preview');
+    const image = document.getElementById('previewImage');
+
+    // The right panel overlaps the left one, so match the visible strip.
+    const size = function() {
+        preview.style.width = `${document.getElementsByClassName('right')[0].getBoundingClientRect().left}px`;
+    };
+    size();
+    window.addEventListener('resize', size);
+
+    for (let link of document.querySelectorAll('.projectName[data-preview]')) {
+        const source = link.dataset.preview;
+        new Image().src = source; // Preload so the first hover doesn't flash.
+
+        const show = function() {
+            image.src = source;
+            preview.classList.add('show');
+        };
+        const hide = function() {
+            preview.classList.remove('show');
+        };
+
+        link.addEventListener('mouseenter', show);
+        link.addEventListener('mouseleave', hide);
+        link.addEventListener('focus', show);
+        link.addEventListener('blur', hide);
+    }
+}
+
 let cube = [];
 for (let i = 0; i < 8; i++) {
     var n = i.toString(2);

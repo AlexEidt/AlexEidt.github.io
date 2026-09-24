@@ -32,6 +32,8 @@
             <span>E</span><span>i</span><span>d</span><span>t</span>
         </div>
     </div>
+    <!-- Sits between the panels: covers the left panel, hidden under the right one. -->
+    <div class="preview" id="preview"><img id="previewImage" alt="" /></div>
     <div class="container right">
         <div class="altHeader">
             <h1 data-heading="Slide">Alex Eidt</h1>
@@ -122,11 +124,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/Trace" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/Trace" target="_blank" data-preview="Projects/Trace.png">
                         Trace
-                        <span>
-                            <video poster="Projects/Trace.png"></video>
-                        </span>
                     </a>
                 </td>
                 <td>CPU Path Tracer.</td>
@@ -139,11 +138,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/Raster" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/Raster" target="_blank" data-preview="Projects/Raster.png">
                         Raster
-                        <span>
-                            <video poster="Projects/Raster.png"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Software 3D Renderer.</td>
@@ -156,11 +152,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/shockwave" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/shockwave" target="_blank" data-preview="Projects/Shockwave.jpg">
                         Shockwave
-                        <span>
-                            <video poster="Projects/Shockwave.jpg"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Flow-Oriented Image Filter.</td>
@@ -173,11 +166,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/Chess" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/Chess" target="_blank" data-preview="Projects/Chess.png">
                         Chess
-                        <span>
-                            <video poster="Projects/Chess.png"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Chess Engine with a GUI.</td>
@@ -221,11 +211,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/qr" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/qr" target="_blank" data-preview="Projects/QR.png">
                         qr
-                        <span>
-                            <video poster="Projects/QR.png"></video>
-                        </span>
                     </a>
                 </td>
                 <td>QR Code Generator.</td>
@@ -238,11 +225,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/Quart" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/Quart" target="_blank" data-preview="Projects/Quart.png">
                         Quart
-                        <span>
-                            <video poster="Projects/Quart.png"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Quadtree Image Compression.</td>
@@ -255,11 +239,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/Pencil" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/Pencil" target="_blank" data-preview="Projects/Pencil.jpg">
                         Pencil
-                        <span>
-                            <video poster="Projects/Pencil.jpg"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Pencil Sketch Renderer.</td>
@@ -284,11 +265,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/Karve" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/Karve" target="_blank" data-preview="Projects/Karve.jpg">
                         Karve
-                        <span>
-                            <video poster="Projects/Karve.jpg"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Seam Carver with object removal.</td>
@@ -301,11 +279,8 @@
                     </a>
                 </td>
                 <td>
-                    <a class="link projectName" href="https://github.com/AlexEidt/ASCII-Video" target="_blank">
+                    <a class="link projectName" href="https://github.com/AlexEidt/ASCII-Video" target="_blank" data-preview="Projects/ASCII.jpg">
                         ASCII
-                        <span>
-                            <video poster="Projects/ASCII.jpg"></video>
-                        </span>
                     </a>
                 </td>
                 <td>Real-time color ASCII video renderer.</td>
@@ -340,6 +315,10 @@
         The design of this website was inspired by <a href="http://sub.mersion.cc/" target="_blank">sub.mersion.cc</a>.
         <br />
         <br />
+        <div style="width: fit-content; margin-inline: auto;">
+            <i>"Talent is nothing more than a pursued interest."</i>
+            <p style="text-align: right; margin: 0;">—Bob Ross</p>
+        </div>
         <div style="display: flex; align-items: center;">
             <a href="https://creativecommons.org/licenses/by/4.0/" id="copyright" target="_blank">&copy Alex Eidt</a>
             <canvas id="canvas"></canvas>
