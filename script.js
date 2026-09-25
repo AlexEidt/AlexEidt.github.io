@@ -19,6 +19,10 @@ function setupPreviews() {
     size();
     window.addEventListener('resize', size);
 
+    const hide = function() {
+        preview.classList.remove('show');
+    };
+
     for (let link of document.querySelectorAll('.projectName[data-preview]')) {
         const source = link.dataset.preview;
         new Image().src = source; // Preload so the first hover doesn't flash.
@@ -27,15 +31,26 @@ function setupPreviews() {
             image.src = source;
             preview.classList.add('show');
         };
-        const hide = function() {
-            preview.classList.remove('show');
-        };
 
         link.addEventListener('mouseenter', show);
         link.addEventListener('mouseleave', hide);
-        link.addEventListener('focus', show);
+        // Links open in a new tab, so hide before the tab switches away.
+        link.addEventListener('click', hide);
+        // Only keyboard focus should show the preview, not the focus a click leaves behind.
+        link.addEventListener('focus', function() {
+            if (link.matches(':focus-visible')) show();
+        });
         link.addEventListener('blur', hide);
     }
+
+    // Leaving the page or window never fires mouseleave, so clear the preview here.
+    document.addEventListener('mouseleave', hide);
+    window.addEventListener('blur', hide);
+    window.addEventListener('pagehide', hide);
+    window.addEventListener('pageshow', hide); // Returning through the back button.
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) hide();
+    });
 }
 
 let cube = [];
