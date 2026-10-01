@@ -1,16 +1,21 @@
 html {
     max-width: 100%;
     overflow-x: hidden;
+
+    /* Page background: whitesmoke with a cool blue tint. */
+    --bg: #D1DBE9;
+    /* Sampled from the photo on the left, kept translucent so text stays crisp. */
+    --selection: rgba(158, 168, 184, 0.4);
 }
 
 ::selection { /* WebKit/Blink Browsers */
-    background: rgb(221, 212, 206);
+    background: var(--selection);
     /* background: rgb(221, 255, 176); v1 */
     /* background: rgb(16, 205, 230); */
     /* background: rgb(12, 245, 202); */
   }
 ::-moz-selection { /* Gecko Browsers */
-    background: rgb(221, 212, 206);
+    background: var(--selection);
     /* background: rgb(221, 255, 176); v1 */
     /* background: rgb(16, 205, 230); */
     /* background: rgb(12, 245, 202); */
@@ -47,7 +52,7 @@ body {
     color: black;
     font-size: 1.6rem;
     font-weight: bold;
-    background-color: whitesmoke;
+    background-color: var(--bg);
     margin: 0;
     transition: 0.7s;
 }
@@ -60,7 +65,7 @@ body {
 
 #aztec {
     display: none;
-    background: whitesmoke;
+    background: var(--bg);
 }
 
 .container {
@@ -80,6 +85,10 @@ body {
     padding-top: 30vh;
     padding-bottom: 5rem;
     background-image: url('theplan.png');
+
+    /* Multiply the photo with the page color so its whites match the page. */
+    background-color: var(--bg);
+    background-blend-mode: multiply;
 
     /* Alternate Background Colors. */
     /*background-color: #ff4040;*/
@@ -117,7 +126,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     transition: 700ms;
-    color: rgba(245, 245, 245, 0.1);
+    color: rgba(209, 219, 233, 0.1);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7);
     position: sticky;
     top: 75%;
@@ -153,8 +162,8 @@ body {
 }
 
 .preview img {
-    max-width: 95%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 70%;
     background-color: black;
     border: 0.6rem solid black;
     border-radius: 0.5rem;
@@ -233,7 +242,7 @@ body {
     right: 0;
     width: 100%;
     padding: 2em;
-    background-color: whitesmoke;
+    background-color: var(--bg);
     overflow-y: scroll;
     z-index: 1;
     transition: '';
@@ -321,6 +330,13 @@ p {
     padding: 0.5rem;
 }
 
+/* Icons aren't text, so dragging a selection across them shouldn't paint them. */
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
 /* Email, Resume, GitHub Icons. */
 img.largeIcon {
     width: 4.5rem;
@@ -330,6 +346,8 @@ img.largeIcon {
 img.expIcon {
     width: 90%;
     border-radius: 0.75rem;
+    /* Tints the white logo art to the page color; the black stays black. */
+    mix-blend-mode: multiply;
 }
 
 img.inlineIcon {
@@ -366,7 +384,7 @@ a img:hover, .blurOnHover:hover, .link.largeIcon:hover {
 
 /* Icons that are inverted get blur hover effect. */
 .invertedLink:hover {
-    /* The following filters approximate the "whitesmoke" color. */
+    /* The following filters approximate the page background color. */
     transition: 0.4s;
     -webkit-filter: blur(1px) invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
     filter: blur(1px) invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
@@ -392,6 +410,13 @@ div.iconStack {
     flex-wrap: wrap;
 }
 
+/* Icon and label on one row, so a selection hugs the text instead of the
+   tall line box the icon would otherwise create. */
+div.iconStack > div {
+    display: flex;
+    align-items: center;
+}
+
 /* Project Header with Icons. */
 div.projectHeader {
     display: block;
@@ -411,7 +436,7 @@ img.bookIcon {
 
 /* For images that should be inverted. */
 .invert {
-    /* The following filters approximate the "whitesmoke" color. */
+    /* The following filters approximate the page background color. */
     -webkit-filter: invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
     filter: invert(100%) sepia(3%) saturate(77%) hue-rotate(355deg) brightness(111%) contrast(92%);
 }
@@ -480,7 +505,7 @@ img.bookIcon {
     }
     .right {
         width: 60%;
-        background: whitesmoke;
+        background: var(--bg);
         transition: width 2s;
     }
     h1 {
